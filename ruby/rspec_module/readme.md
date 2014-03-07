@@ -20,6 +20,8 @@ When using **Capybara** for testing, sometimes you want to test features that re
 		features/
 			upload_photos.rb
 		spec_helper.rb
+
+The important directories are **app/helpers** and **spec/**
 	
 ## Directions
 Don't forget to bundle first.
@@ -62,3 +64,46 @@ We have a method called **user_login** that:
 
 **Note**: This assumes that you are creating a user **fixture** somewhere in your spec before calling this method. 
 
+## Spec Helper
+In Rails, the **spec_helper.rb** file is where any rspec configurations are contained. When you generate your rails app, the spec_helper should look something like this (**with comments removed**):
+
+	ENV["RAILS_ENV"] ||= 'test'
+	require File.expand_path("../../config/environment", __FILE__)
+	require 'rspec/rails'
+	require 'rspec/autorun'
+
+	Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
+	ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+
+	RSpec.configure do |config|
+	  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+	  config.use_transactional_fixtures = true
+
+	  config.infer_base_class_for_anonymous_controllers = false
+
+	  config.order = "random"
+	end
+
+In order to include a module that is **accessible** **in** your **specs**, you will need to set set the **include** attribute on the **config** variable like so:
+
+	config.include LoginSpecHelper
+
+So that your RSpec.configure do |config| block looks like this:
+
+	RSpec.configure do |config|
+		config.include LoginSpecHelper # includes helper module
+	
+		config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+		config.use_transactional_fixtures = true
+
+		config.infer_base_class_for_anonymous_controllers = false
+
+		config.order = "random"
+	end
+
+!!**Note**!!: The name of the module **LoginSpecHelper** is the name of the file **login_spec_helper.rb** in **CamelCase**.
+
+Now, your specs files should have access to the **user_login** method as long as you require 'spec_helper' at the top.

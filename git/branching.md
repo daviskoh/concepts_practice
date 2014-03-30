@@ -13,6 +13,10 @@ ex:
 type:
 
 	git lga
+
+## Basic Terms
+
+HEAD - pointer that points to current branch
 	
 ## Create New Branch
 
@@ -25,3 +29,7 @@ creates branch if not created **already**
 	git checkout -b branch_name
 
 
+## Rename Branch
+
+	git branch -m current_name new_name
+	

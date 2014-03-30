@@ -33,3 +33,21 @@ creates branch if not created **already**
 
 	git branch -m current_name new_name
 	
+## Stashing
+
+To **stash** changes:
+
+	git stash optional_branch_name
+
+To **access** changes:
+
+	git stash list
+	
+To **reapply** changes:
+
+	git stash apply
+
+To **reapply** changes & **remove** last stashed change:
+
+	git stash pop
+

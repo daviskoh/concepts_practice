@@ -8,7 +8,7 @@ certain long git commands by using:
 
 ex:
 
-	git config --global alias.lga "git log --graph --online --all --decorate"
+	git config --global alias.lga "log --graph --oneline --all --decorate"
 
 type:
 

@@ -2,7 +2,7 @@ angular.module('myApp')
 
 .directive('superman', [function() {
   return {
-    // create custom HTML element
+    // create custom HTML element (E)
     restrict: "E",
     template: "<div>Superman</div>"
   }
@@ -10,7 +10,7 @@ angular.module('myApp')
 
 .directive('batman', [function() {
   return {
-    // add custom attribute
+    // add custom attribute (A)
     restrict: "A",
     template: "Batman"
   }
@@ -19,6 +19,24 @@ angular.module('myApp')
 .directive('team', [function() {
   return {
     restrict: "E",
-    template: "<li ng-repeat='dude in dudes'>Name: {{dude.name}}</li>"
+    template: "<li ng-repeat='dude in dudes' my-behavior another-behavior>Name: {{dude.name}}</li>"
+  }
+}])
+
+.directive('my-behavior', [function() {
+  return {
+    restrict: "A",
+    link: function() {
+      console.log('my behavior');
+    }
+  }
+}])
+
+.directive('another-behavior', [function() {
+  return {
+    restrict: "A",
+    link: function() {
+      console.log('Another behavior');
+    }
   }
 }]);

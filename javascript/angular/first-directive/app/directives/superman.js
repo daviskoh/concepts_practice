@@ -13,4 +13,11 @@ angular.module('myApp')
     // add custom attribute
     template: "Batman"
   }
+}])
+
+.directive('team', [function() {
+  return {
+    restrict: "E",
+    template: "<li ng-repeat='dude in dudes'>Name: {{dude.name}}</li>"
+  }
 }]);

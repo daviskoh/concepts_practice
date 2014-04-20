@@ -17,6 +17,24 @@
             <input type="text" ng-model="data.message">
             <h1>{{data.message | reverse}}</h1>
             <div ng-init="ello()"></div>
+
+            <h2>Search by text</h2>
+            <input type="text" ng-model="searchFood.$">
+            <ul>
+                <li ng-repeat="food in foods | filter:searchFood">
+                    <p>{{food.name}}</p>
+                    <p>{{food.taste}}</p>
+                </li>
+            </ul>
+
+            <h2>Search by attribute name</h2>
+            <input type="text" ng-model="searchFood.name">
+            <ul>
+                <li ng-repeat="food in foods | filter:searchFood">
+                    <p>{{food.name}}</p>
+                    <p>{{food.taste}}</p>
+                </li>
+            </ul>
         </div>
 
     </div>

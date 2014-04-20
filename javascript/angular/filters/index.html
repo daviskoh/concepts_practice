@@ -35,6 +35,15 @@
                     <p>{{food.taste}}</p>
                 </li>
             </ul>
+
+            <h2>Built in filters</h2>
+            <h3>Sorted in reverse order by taste, limited to last 3</h3>
+            <ul>
+                <li ng-repeat="food in foods | orderBy:'-taste' | limitTo:-3">
+                    <p>{{food.name}}</p>
+                    <p>{{food.taste}}</p>
+                </li>
+            </ul>
         </div>
 
     </div>

@@ -11,6 +11,7 @@ angular.module('myApp')
 .directive('batman', [function() {
   return {
     // add custom attribute
+    restrict: "A",
     template: "Batman"
   }
 }])

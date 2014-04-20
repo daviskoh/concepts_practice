@@ -7,4 +7,12 @@ angular.module('myApp')
       console.log('I am inside of you');
     });
   }
+}])
+
+.directive('leave', [function() {
+  return function(scope, element) {
+    element.bind('mouseleave', function() {
+      console.log('I am outside of you');
+    });
+  }
 }]);

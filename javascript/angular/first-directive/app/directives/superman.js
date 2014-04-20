@@ -1,7 +1,16 @@
-angular.module('myApp').directive('superman', [function() {
+angular.module('myApp')
+
+.directive('superman', [function() {
   return {
     // create custom HTML element
     restrict: "E",
-    template: "<div>Here I am to save the day</div>"
+    template: "<div>Superman</div>"
+  }
+}])
+
+.directive('batman', [function() {
+  return {
+    // add custom attribute
+    template: "Batman"
   }
 }]);

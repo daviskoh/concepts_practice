@@ -48,7 +48,7 @@ const (
 )
 
 /**
-* Printing Constans & Variables
+* Printing Constants & Variables
 **/
 
 // print & add new line

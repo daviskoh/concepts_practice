@@ -53,6 +53,7 @@ var EggheadGenerator = yeoman.generators.Base.extend({
 
   runtime: function() {
     this.copy('bowerrc', '.bowerrc');
+    this.copy('gitignore', '.gitignore');
   }
 });
 

@@ -126,13 +126,27 @@ Result return values **can be named** & no longer need to specify them in return
 **NOTE**: by default Go passes arguments by **VALUE** (copy arguments)  
 If desire arguments by **REFERENCE**, need to in pass pointers
 
-To Get Pointer of Value:
+To Get Pointer of Value: **&**value
 
-	&value
+	e.g.
+	v := &Vertex{X: 3, Y: 4}	
 
-To DeReference Pointer:
+To De-Reference Pointer: **\***pointer
 
-	*pointer
+	// method on pointer type
+	func (v *Vertex) Add() {
+		// mutates v
+		v.X = 6
+		return v.X + v.Y
+	}
+	vs
+	// method on value type
+	func (v Vertex) Add() {
+		// NOT mutate v
+		v.X = 6
+		return v.X + v.Y
+	}
+
 
 ## 2.9 Mutability
 

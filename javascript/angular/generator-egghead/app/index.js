@@ -25,19 +25,21 @@ var EggheadGenerator = yeoman.generators.Base.extend({
     // replace it with a short and sweet description of your generator
     this.log(chalk.magenta('This is what you need to get started on Egghead tutorials.'));
 
-    var prompts = [{
-        name: 'tutorialName',
-        message: 'Which egghead tutorial is this?'
-      }];
+    // var prompts = [{
+    //     name: 'tutorialName',
+    //     message: 'Which egghead tutorial is this?'
+    //   }];
 
-    this.prompt(prompts, function (props) {
-      this.tutorialName = props.tutorialName;
+    // this.prompt(prompts, function (props) {
+    //   this.tutorialName = props.tutorialName;
 
-      done();
-    }.bind(this));
+    //   done();
+    // }.bind(this));
   },
 
   app: function () {
+    this.tutorialName = path.basename(process.cwd());
+    
     // create app directory
     this.directory('app', 'app');
 

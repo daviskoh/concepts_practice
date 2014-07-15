@@ -35,6 +35,7 @@ var EggheadGenerator = yeoman.generators.Base.extend({
 
     //   done();
     // }.bind(this));
+    done();
   },
 
   app: function () {

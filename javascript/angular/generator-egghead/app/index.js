@@ -10,9 +10,9 @@ var EggheadGenerator = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
 
     this.on('end', function () {
-      if (!this.options['skip-install']) {
-        this.installDependencies();
-      }
+      // if (!this.options['skip-install']) {
+      //   this.installDependencies();
+      // }
     });
   },
 
@@ -42,9 +42,10 @@ var EggheadGenerator = yeoman.generators.Base.extend({
     this.tutorialName = path.basename(process.cwd());
     
     // create app directory
-    this.directory('app', 'app');
+    this.directory('src', 'src');
+    this.directory('test', 'test');
 
-    this.template('_index.html', 'app/index.html');
+    this.template('_index.html', 'src/index.html');
 
     // dependency files
     this.template('_package.json', 'package.json');
@@ -54,6 +55,7 @@ var EggheadGenerator = yeoman.generators.Base.extend({
   runtime: function() {
     this.copy('bowerrc', '.bowerrc');
     this.copy('gitignore', '.gitignore');
+    this.copy('Gruntfile', 'Gruntfile.js');
   }
 });
 

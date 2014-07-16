@@ -1,3 +1,4 @@
 node_modules
 /node_modules/*/node-modules/
-/app/bower_components
+/src/app/libs
+/src/test/lib

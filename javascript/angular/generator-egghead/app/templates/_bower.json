@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.19",
-    "angular-ui-router": "*",
+    "angular-ui-router": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.19"

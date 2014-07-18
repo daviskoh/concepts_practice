@@ -1,4 +1,4 @@
 node_modules
 /node_modules/*/node-modules/
-/src/app/libs
-/src/test/lib
+/src/libs/
+/test/lib

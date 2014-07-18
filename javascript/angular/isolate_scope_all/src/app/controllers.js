@@ -3,9 +3,9 @@
 angular.module('myControllers', [])
 
 .controller('FirstCtrl', function($scope) {
-  
-})
+    $scope.ctrlFlavor = 'blackberry';
 
-.controller('SecondCtrl', function($scope) {
-      
+    $scope.callHome = function (message) {
+        alert(message);
+    };
 });

@@ -8,11 +8,26 @@
     <div ng-app="myApp">
         
         <div ng-controller="FirstCtrl">
-            
-        </div>
+            <!-- <div drink-at flavor="strawberry"></div> -->
 
-        <div ng-controller="SecondCtrl">
-            
+            <!-- <input type="text" ng-model="ctrlFlavor"> -->
+            <!-- @ -->
+            <h1>@</h1>
+            <div drink-at flavor="{{ctrlFlavor}}"></div>
+            <br>
+    
+            <!-- = -->
+            <h1>=</h1>
+            Ctrl
+            <input type="text" ng-model="ctrlFlavor">
+            <br>
+            Directive
+            <div drink-equals flavor="ctrlFlavor"></div>
+            <br>
+
+            <!-- & -->
+            <h1>&</h1>
+            <phone dial="callHome(message)"></phone>
         </div>
 
     </div>

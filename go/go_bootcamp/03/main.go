@@ -55,7 +55,7 @@ func three2() {
 func timeMap(y interface{}) {
 	// check if y is map of interfaces
 	if z, ok := y.(map[string]interface{}); ok {
-		//
+		// then add new entry
 		z["updated_at"] = time.Now()
 	}
 }
@@ -79,6 +79,12 @@ func printString(value interface{}) {
 	case Stringer:
 		fmt.Println(str.String())
 	}
+}
+
+func three3() {
+	s := &fakeString{"Ceci n'est pas un string"}
+	printString(s)
+	printString("Hello, Gophers")
 }
 
 /**
@@ -216,6 +222,8 @@ func main() {
 	three1()
 	// 3.2
 	three2()
+	// 3.3
+	three3()
 	// 3.4
 	three4()
 	// 3.6

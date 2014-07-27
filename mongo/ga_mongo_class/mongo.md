@@ -171,3 +171,17 @@ Replica set - cluster of servers that all copy each other's data
 
 If primary goes down, a secondary steps up to assume role
 
+### Load JavaScript files
+
+	> load(path)
+
+### Map Reduce
+
+map - extract desired data & format to different
+reduce = bind data
+
+	> db.users.mapReduce(
+		mapFunction,
+		reduceFunction
+	)
+

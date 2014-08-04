@@ -77,3 +77,50 @@ function myPop (array) {
 }
 myPop(nums); // if not have pop()
 
+/**
+* Exercises
+**/
+
+// 1
+function Grades () {
+    this.grades = [];
+
+    this.add = function (grade) {
+        this.grades.push(grade);
+    };
+
+    this.average = function () {
+        var total = 0;
+
+        for (var i = this.grades.length - 1; i >= 0; i--) {
+            total += this.grades[i];
+        };
+
+        return total / this.grades.length;
+    };
+};
+
+var grades1 = new Grades;
+grades1.add(1);
+grades1.add(2);
+grades1.add(3);
+
+var grades2 = new Grades;
+grades2.add(2);
+grades2.add(4);
+grades2.add(6);
+
+console.log(
+    grades1.average(),
+    grades2.average()
+);
+
+// 2
+var words = ['meow', 'dude', 'bro'];
+
+console.log(
+    words.join(),
+    words.reverse().join()
+);
+
+// 3

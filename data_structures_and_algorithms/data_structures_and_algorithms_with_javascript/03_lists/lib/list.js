@@ -36,19 +36,32 @@ module.exports = function List() {
     this.dataStore = [];
 
     // methods
-    this.clear = clear;
-    this.find = find;
-    this.toString = toString;
-    this.insert = insert;
     this.append = append;
     this.remove = remove;
-    this.front = front;
-    this.end = end;
-    this.prev = prev;
-    this.next = next;
-    this.length = length;
-    this.currPos = currPos;
-    this.moveTo = moveTo;
-    this.getElement = getElement;
-    this.contains = contains;
+
+    // this.clear = clear;
+    // this.find = find;
+    // this.toString = toString;
+    // this.insert = insert;
+    // this.front = front;
+    // this.end = end;
+    // this.prev = prev;
+    // this.next = next;
+    // this.length = length;
+    // this.currPos = currPos;
+    // this.moveTo = moveTo;
+    // this.getElement = getElement;
+    // this.contains = contains;
+}
+
+function append(element) {
+    // set new element at position of listSize + 1
+    // then inc listSize by 1
+    this.dataStore[this.listSize++] = element;
+}
+
+function remove() {
+    // find element in list
+    // remove it
+    // adjust space in underlying array left by removal
 }

@@ -3,6 +3,6 @@ var List = require('../lib/list.js'),
 
 describe('List', function() {
     it('exists', function() {
-        console.log(should);
+        List.should.be.ok;
     });
 });

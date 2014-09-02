@@ -44,8 +44,20 @@ describe('List', function() {
     describe('#remove', function() {
         var newList = new List;
 
-        xit('removes an element from the list', function() {
-            
+        it('removes an element from the list', function() {
+            newList.append(5);
+            newList.remove(5);
+            newList.find(5).should.eql(-1);
+        });
+
+        it('returns true if element successfully removed', function() {
+            newList.append(5);
+            newList.remove(5).should.be.true;
+        });
+
+        it('returns false if element unnsuccessfully removed', function() {
+            newList.append(5);
+            newList.remove(2).should.be.false;
         });
     });
 });

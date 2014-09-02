@@ -70,8 +70,18 @@ function find(element) {
     return -1;
 }
 
-function remove() {
+function remove(element) {
     // find element in list
-    // remove it
-    // adjust space in underlying array left by removal
+    var foundAt = this.find(element);
+
+    if (foundAt > -1) {
+        // remove it
+        this.dataStore.splice(foundAt, 1);
+        // adjust space in underlying array left by removal
+        --this.listSize;
+
+        return true;
+    }
+
+    return false;
 }

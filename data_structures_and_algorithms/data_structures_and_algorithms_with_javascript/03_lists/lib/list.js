@@ -37,10 +37,10 @@ module.exports = function List() {
 
     // methods
     this.append = append;
+    this.find = find;
     this.remove = remove;
 
     // this.clear = clear;
-    // this.find = find;
     // this.toString = toString;
     // this.insert = insert;
     // this.front = front;
@@ -58,6 +58,16 @@ function append(element) {
     // set new element at position of listSize + 1
     // then inc listSize by 1
     this.dataStore[this.listSize++] = element;
+}
+
+function find(element) {
+    for (var i = 0; i < this.dataStore.length; i++) {
+        if (this.dataStore[i] === element) {
+            return i;
+        }
+    };
+
+    return -1;
 }
 
 function remove() {

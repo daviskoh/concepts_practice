@@ -2,6 +2,12 @@ var List = require('../lib/list.js'),
     should = require('should');
 
 describe('List', function() {
+    var newList;
+
+    beforeEach(function() {
+        newList = new List;
+    });
+
     it('exists', function() {
         List.should.be.ok;
     });
@@ -11,24 +17,23 @@ describe('List', function() {
     });
 
     describe('#append', function() {
-        var newList = new List;
-
         it('allows an element to be appended to list', function() {
             newList.append(1);
+
             newList.listSize.should.eql(1);
             newList.dataStore.should.containEql(1);
         });
 
         it('allows another element to be appended to list', function() {
             newList.append(8);
+            newList.append(8);
+
             newList.listSize.should.eql(2);
             newList.dataStore.should.containEql(8);
         });
     });
 
     describe('#find', function() {
-        var newList = new List;
-
         it('finds an element and returns its position in list', function() {
             for (var i = 0; i < 10; i++) {
                 newList.append(i * 2);
@@ -42,8 +47,6 @@ describe('List', function() {
     });
 
     describe('#remove', function() {
-        var newList = new List;
-
         it('removes an element from the list', function() {
             newList.append(5);
             newList.remove(5);
@@ -62,8 +65,7 @@ describe('List', function() {
     });
 
     describe('#length', function() {
-        var newList = new List,
-            count;
+        var count;
 
         it('returns number of elements in list', function() {
             count = 11;
@@ -73,6 +75,12 @@ describe('List', function() {
             };
 
             newList.length().should.eql(count);
+        });
+    });
+
+    describe('#toString', function() {
+        it('should return the .dataStore', function() {
+            
         });
     });
 });

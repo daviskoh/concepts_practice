@@ -39,6 +39,7 @@ module.exports = function List() {
     this.append = append;
     this.find = find;
     this.remove = remove;
+    this.length = length;
 
     // this.clear = clear;
     // this.toString = toString;
@@ -47,7 +48,6 @@ module.exports = function List() {
     // this.end = end;
     // this.prev = prev;
     // this.next = next;
-    // this.length = length;
     // this.currPos = currPos;
     // this.moveTo = moveTo;
     // this.getElement = getElement;
@@ -84,4 +84,8 @@ function remove(element) {
     }
 
     return false;
+}
+
+function length() {
+    return this.listSize;
 }

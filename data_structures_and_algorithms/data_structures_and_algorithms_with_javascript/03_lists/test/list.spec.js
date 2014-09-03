@@ -60,4 +60,19 @@ describe('List', function() {
             newList.remove(2).should.be.false;
         });
     });
+
+    describe('#length', function() {
+        var newList = new List,
+            count;
+
+        it('returns number of elements in list', function() {
+            count = 11;
+
+            for (var i = 0; i < count; i++) {
+                newList.append(i);
+            };
+
+            newList.length().should.eql(count);
+        });
+    });
 });

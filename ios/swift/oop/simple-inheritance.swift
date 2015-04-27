@@ -43,8 +43,10 @@ class Person: Animal {
 class Dog: Animal {
     var name: String!
 
-    var dogYears: Int {
-        return 1
+    override var age: Int {
+        // NOTE: this is an oversimplification
+        // and will not be accurate when human age is equal to 0
+        return super.age * 7
     }
 
     init(isMale: Bool, dateOfBirth: NSDate, name: String) {
@@ -59,6 +61,7 @@ let dog = Dog(isMale: false, dateOfBirth: NSDate(), name: "Barky")
 println("dog: \(dog)")
 println("dog's sex: \(dog.sex)")
 println("dog's DOB: \(dog.dateOfBirth)")
+println("dog's age in dog years: \(dog.age)")
 dog.walk()
 
 let person = Person(isMale: true, dateOfBirth: NSDate(), name: "bob")

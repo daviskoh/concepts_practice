@@ -55,7 +55,7 @@ class Dog: Animal {
 
 }
 
-let dog = Animal(isMale: false, dateOfBirth: NSDate())
+let dog = Dog(isMale: false, dateOfBirth: NSDate(), name: "Barky")
 println("dog: \(dog)")
 println("dog's sex: \(dog.sex)")
 println("dog's DOB: \(dog.dateOfBirth)")

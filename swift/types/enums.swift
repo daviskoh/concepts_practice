@@ -3,7 +3,7 @@ enum CardinalDirection {
     case North, East, South, West
 }
 
-var direction = CardinalDirection.North
+var direction: CardinalDirection = .North
 // once direction is declared as type CardinalDirection...
 direction = .South
 

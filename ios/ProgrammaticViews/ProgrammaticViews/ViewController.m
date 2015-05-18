@@ -23,6 +23,22 @@
      * 3) Use Auto Layout (or viewWillLayoutSubviews & viewDidLayoutSubviews)
      * 4) Assign root view to ViewController#view
      */
+    
+    
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+
+    // create root view
+    UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
+    contentView.backgroundColor = [UIColor greenColor];
+    
+    // assign to .view prop
+    self.view = contentView;
+    
+    // add subview
+    UIView *levelView = [[UIView alloc] init];
+    levelView.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:levelView];
 }
 
 - (void)viewDidLoad {

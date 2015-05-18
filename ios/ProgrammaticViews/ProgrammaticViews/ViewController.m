@@ -14,6 +14,17 @@
 
 @implementation ViewController
 
+- (void)loadView {
+    /**
+     * Steps:
+     * 
+     * 1) Create roow view object
+     * 2) Create additional subviews & add to root view
+     * 3) Use Auto Layout (or viewWillLayoutSubviews & viewDidLayoutSubviews)
+     * 4) Assign root view to ViewController#view
+     */
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

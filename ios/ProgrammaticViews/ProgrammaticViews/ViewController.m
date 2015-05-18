@@ -18,8 +18,8 @@
     /**
      * Steps:
      * 
-     * 1) Create roow view object
-     * 2) Create additional subviews & add to root view
+     * 1) Create roow view object (UIView, custom view or other to usually scale to fill screen)
+     * 2) Create additional subviews and add to root view by init & addSubview: method
      * 3) Use Auto Layout (or viewWillLayoutSubviews & viewDidLayoutSubviews)
      * 4) Assign root view to ViewController#view
      */

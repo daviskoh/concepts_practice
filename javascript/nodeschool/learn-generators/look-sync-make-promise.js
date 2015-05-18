@@ -3,8 +3,6 @@ function askFoo () {
         resolve('foo');
     });
 
-    console.log(promise);
-
     return promise;
 }
 
@@ -12,13 +10,23 @@ function run (generator) {
     // create iterator from generator
     var iterator = generator();
 
-    iterator.next().value.then(function (foo) {
-        // do something w/ foo
-    });
+    // extract promise
+    iterator.next().value
+        .then(function (foo) {
+            // continue execution when successfull
+            iterator.next(foo);
+        })
+        .catch(function (e) {
+            iterator.throw(e);
+        });
 }
 
 run(function* () {
-    var foo = yield askFoo();
-    console.log(foo);
+    try {
+        var foo = yield askFoo();
+        console.log(foo);
+    } catch (e) {
+        console.log(e);
+    }
 }); // foo
 

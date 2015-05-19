@@ -1,2 +1,6 @@
-TODO: Article: http://matthewmorey.com/creating-uiviews-programmatically-with-auto-layout/
+FIXME: Article: http://matthewmorey.com/creating-uiviews-programmatically-with-auto-layout/
+
+TODO: check UIView#setTranslatesAutoresizingMaskIntoConstraints implemenation
+TODO: check UIView#addConstraint implementation
+TODO: check NSLayoutConstraint#constraintWithItem implementation
 

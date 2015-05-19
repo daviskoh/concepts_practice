@@ -23,22 +23,59 @@
      * 3) Use Auto Layout (or viewWillLayoutSubviews & viewDidLayoutSubviews)
      * 4) Assign root view to ViewController#view
      */
-    
-    
-    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
 
     // create root view
-    UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
+    UIView *contentView = [[UIView alloc] init];
     contentView.backgroundColor = [UIColor greenColor];
-    
     // assign to .view prop
     self.view = contentView;
     
+    // create subview
+    UIView *subView = [[UIView alloc] init];
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    subView.backgroundColor = [UIColor redColor];
     // add subview
-    UIView *levelView = [[UIView alloc] init];
-    levelView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:subView];
     
-    [self.view addSubview:levelView];
+    /**
+     * Constraints
+     */
+    
+    // width constraint - 1/2 of parent view width
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeWidth
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeWidth
+                                                         multiplier:0.5
+                                                           constant:0]];
+    
+    // height constraint - 1/2 of parent view height
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeHeight
+                                                          multiplier:0.5
+                                                           constant:0]];
+    
+    // center horizontally
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0]];
+    
+    // center vertically
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeCenterY
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterY
+                                                         multiplier:1.0
+                                                           constant:0]];
 }
 
 - (void)viewDidLoad {

@@ -32,6 +32,8 @@
     
     // create subview
     UIView *subView = [[UIView alloc] init];
+    // sets below for the constraint-based layout system
+    // must be called manually for programmatically created views
     [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
     subView.backgroundColor = [UIColor redColor];
     // add subview

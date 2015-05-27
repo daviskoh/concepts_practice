@@ -43,6 +43,7 @@
     
     /**
      * Constraints
+     * NOTE: it is responsibility of the parent view to assign position to its children
      */
     
     // width constraint - 1/2 of parent view width

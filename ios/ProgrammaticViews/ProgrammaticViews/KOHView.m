@@ -10,6 +10,8 @@
 
 @implementation KOHView
 
+@synthesize subView=_subView;
+
 - (id)init {
     return [self initWithFrame:CGRectZero];
 }
@@ -30,17 +32,9 @@
         
         // create root view
         self.backgroundColor = [UIColor greenColor];
-        
-        // create subview
-        UIView *subView = [[UIView alloc] init];
-        /**
-         * IMPORTANT: This ensures no constraint will be created automatically for the view,
-         * otherwise, any constraint you set is likely to conflict with autoresizing constraints
-         */
-        [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        subView.backgroundColor = [UIColor redColor];
+
         // add subview
-        [self addSubview:subView];
+        [self addSubview:self.subView];
         
         /**
          * Constraints
@@ -48,7 +42,7 @@
          */
         
         // width constraint - 1/2 of parent view width
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:subView
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
                                                               attribute:NSLayoutAttributeWidth
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
@@ -57,7 +51,7 @@
                                                                constant:0]];
         
         // height constraint - 1/2 of parent view height
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:subView
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
                                                               attribute:NSLayoutAttributeHeight
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
@@ -66,7 +60,7 @@
                                                                constant:0]];
         
         // center horizontally
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:subView
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
                                                               attribute:NSLayoutAttributeCenterX
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
@@ -75,7 +69,7 @@
                                                                constant:0]];
         
         // center vertically
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:subView
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
                                                               attribute:NSLayoutAttributeCenterY
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
@@ -86,6 +80,21 @@
     }
     
     return self;
+}
+
+- (UIView *)subView {
+    if (!_subView) {
+        // create subview
+        _subView = [[UIView alloc] init];
+        /**
+         * IMPORTANT: This ensures no constraint will be created automatically for the view,
+         * otherwise, any constraint you set is likely to conflict with autoresizing constraints
+         */
+        [_subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        _subView.backgroundColor = [UIColor redColor];
+    }
+    
+    return _subView;
 }
 
 @end

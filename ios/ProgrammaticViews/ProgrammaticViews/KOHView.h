@@ -11,4 +11,6 @@
 
 @interface KOHView : UIView
 
+@property (readonly) UIView *subView;
+
 @end

@@ -13,4 +13,6 @@
 
 @property (readonly) UIView *subView;
 
+@property BOOL didSetupConstraints;
+
 @end

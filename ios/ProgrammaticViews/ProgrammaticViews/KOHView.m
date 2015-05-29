@@ -58,6 +58,8 @@
 }
 
 - (void)setupConstraints {
+    self.didSetupConstraints = YES;
+    
     /**
      * Constraints
      * NOTE: it is responsibility of the parent view to assign position to its children
@@ -98,6 +100,14 @@
                                                      attribute:NSLayoutAttributeCenterY
                                                     multiplier:1.0
                                                       constant:0]];
+}
+
+- (void)updateConstraints {
+    if (!self.didSetupConstraints) {
+        [self setupConstraints];
+    }
+
+    [super updateConstraints];
 }
 
 @end

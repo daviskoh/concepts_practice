@@ -36,47 +36,7 @@
         // add subview
         [self addSubview:self.subView];
         
-        /**
-         * Constraints
-         * NOTE: it is responsibility of the parent view to assign position to its children
-         */
-        
-        // width constraint - 1/2 of parent view width
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
-                                                              attribute:NSLayoutAttributeWidth
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeWidth
-                                                             multiplier:0.5
-                                                               constant:0]];
-        
-        // height constraint - 1/2 of parent view height
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
-                                                              attribute:NSLayoutAttributeHeight
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeHeight
-                                                             multiplier:0.5
-                                                               constant:0]];
-        
-        // center horizontally
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
-                                                              attribute:NSLayoutAttributeCenterX
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeCenterX
-                                                             multiplier:1.0
-                                                               constant:0]];
-        
-        // center vertically
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
-                                                              attribute:NSLayoutAttributeCenterY
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeCenterY
-                                                             multiplier:1.0
-                                                               constant:0]];
-
+        [self setupConstraints];
     }
     
     return self;
@@ -95,6 +55,49 @@
     }
     
     return _subView;
+}
+
+- (void)setupConstraints {
+    /**
+     * Constraints
+     * NOTE: it is responsibility of the parent view to assign position to its children
+     */
+    
+    // width constraint - 1/2 of parent view width
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
+                                                     attribute:NSLayoutAttributeWidth
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeWidth
+                                                    multiplier:0.5
+                                                      constant:0]];
+    
+    // height constraint - 1/2 of parent view height
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
+                                                     attribute:NSLayoutAttributeHeight
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeHeight
+                                                    multiplier:0.5
+                                                      constant:0]];
+    
+    // center horizontally
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
+                                                     attribute:NSLayoutAttributeCenterX
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeCenterX
+                                                    multiplier:1.0
+                                                      constant:0]];
+    
+    // center vertically
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.subView
+                                                     attribute:NSLayoutAttributeCenterY
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeCenterY
+                                                    multiplier:1.0
+                                                      constant:0]];
 }
 
 @end

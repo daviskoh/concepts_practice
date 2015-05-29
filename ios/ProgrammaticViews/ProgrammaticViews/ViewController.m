@@ -17,7 +17,7 @@
 
 - (void)loadView {
     // assign to .view prop
-    self.view = [[KOHView alloc] initWithFrame:CGRectZero];
+    self.view = [[KOHView alloc] init];
 }
 
 - (void)viewDidLoad {

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE28FFC8-200A-48D6-98FB-7233D6B2CE42</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Callbacks</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>93298C2F516F59B3ECB4426454AE804D5BCC6F16</key>
+		<string>github.com:daviskoh/codestars.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BigNerdRanch/objective-c/Callbacks/Callbacks.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>93298C2F516F59B3ECB4426454AE804D5BCC6F16</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:daviskoh/codestars.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>93298C2F516F59B3ECB4426454AE804D5BCC6F16</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>93298C2F516F59B3ECB4426454AE804D5BCC6F16</string>
+			<key>IDESourceControlWCCName</key>
+			<string>codestars</string>
+		</dict>
+	</array>
+</dict>
+</plist>

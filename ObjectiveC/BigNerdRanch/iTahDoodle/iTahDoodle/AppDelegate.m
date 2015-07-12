@@ -32,6 +32,44 @@ NSString *docPath() {
         tasks = [[NSMutableArray alloc] init];
     }
     
+    // create views
+    
+    CGRect windowFrame = [[UIScreen mainScreen] bounds];
+    UIWindow *theWindow = [[UIWindow alloc] initWithFrame:windowFrame];
+    
+    self.window = theWindow;
+    
+    CGRect tableFrame = CGRectMake(0, 80, 320, 280);
+    CGRect fieldFrame = CGRectMake(20, 40, 200, 31);
+    CGRect buttonFrame = CGRectMake(228, 40, 72, 31);
+    
+    taskTable = [[UITableView alloc] initWithFrame:tableFrame
+                                             style:UITableViewStylePlain];
+    taskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    taskField = [[UITextField alloc] initWithFrame:fieldFrame];
+    taskField.borderStyle = UITextBorderStyleRoundedRect;
+    taskField.placeholder = @"Type a task, tap Insert";
+    
+    insertButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    insertButton.frame = buttonFrame;
+    
+    // add Target Action to button
+    [insertButton addTarget:self
+                     action:@selector(addTask:)
+           forControlEvents:UIControlEventTouchUpInside];
+
+    [insertButton setTitle:@"Insert" forState:UIControlStateNormal];
+    
+    // add UI elements to window
+    [self.window addSubview:taskTable];
+    [self.window addSubview:taskField];
+    [self.window addSubview:insertButton];
+    
+    // put window on screen
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

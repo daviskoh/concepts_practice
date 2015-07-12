@@ -20,9 +20,18 @@ NSString *docPath() {
 
 @implementation AppDelegate
 
+#pragma mark - Application delegate callbacks
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Attempt to load existing todo dataset from array stored to disk
+    NSArray *plist = [NSArray arrayWithContentsOfFile:docPath()];
+    
+    if (plist) {
+        tasks = plist.mutableCopy;
+    } else {
+        tasks = [[NSMutableArray alloc] init];
+    }
+    
     return YES;
 }
 

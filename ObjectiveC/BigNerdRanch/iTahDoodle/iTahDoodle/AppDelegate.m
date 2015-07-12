@@ -12,6 +12,12 @@
 
 @end
 
+NSString *docPath() {
+    NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    return [pathList[0] stringByAppendingPathComponent:@"data.id"];
+}
+
 @implementation AppDelegate
 
 

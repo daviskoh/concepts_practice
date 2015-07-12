@@ -8,10 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+// get path to location on disk where todo list can be saved
+NSString *docPath(void);
+
+// App Delegate is starting point for application
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    UITableView *taskTable;
+    UITextField *taskField;
+    UIButton *insertButton;
+    
+    NSMutableArray *tasks;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (void)addTask:(id)sender;
 
 @end
 

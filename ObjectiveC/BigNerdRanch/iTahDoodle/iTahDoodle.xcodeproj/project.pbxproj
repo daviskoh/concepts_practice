@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DD2C00D81B52A1F600CA4E15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C00D71B52A1F600CA4E15 /* main.m */; };
 		DD2C00DB1B52A1F600CA4E15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C00DA1B52A1F600CA4E15 /* AppDelegate.m */; };
+		DD2C00DE1B52A1F600CA4E15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C00DD1B52A1F600CA4E15 /* ViewController.m */; };
 		DD2C00E31B52A1F600CA4E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2C00E21B52A1F600CA4E15 /* Assets.xcassets */; };
 		DD2C00F11B52A1F600CA4E15 /* iTahDoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C00F01B52A1F600CA4E15 /* iTahDoodleTests.m */; };
 		DD2C00FC1B52A1F600CA4E15 /* iTahDoodleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C00FB1B52A1F600CA4E15 /* iTahDoodleUITests.m */; };
@@ -37,6 +38,8 @@
 		DD2C00D71B52A1F600CA4E15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD2C00D91B52A1F600CA4E15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD2C00DA1B52A1F600CA4E15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD2C00DC1B52A1F600CA4E15 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DD2C00DD1B52A1F600CA4E15 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DD2C00E21B52A1F600CA4E15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD2C00E71B52A1F600CA4E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2C00EC1B52A1F600CA4E15 /* iTahDoodleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTahDoodleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +102,8 @@
 			children = (
 				DD2C00D91B52A1F600CA4E15 /* AppDelegate.h */,
 				DD2C00DA1B52A1F600CA4E15 /* AppDelegate.m */,
+				DD2C00DC1B52A1F600CA4E15 /* ViewController.h */,
+				DD2C00DD1B52A1F600CA4E15 /* ViewController.m */,
 				DD2C00E21B52A1F600CA4E15 /* Assets.xcassets */,
 				DD2C00E71B52A1F600CA4E15 /* Info.plist */,
 				DD2C00D61B52A1F600CA4E15 /* Supporting Files */,
@@ -261,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2C00DE1B52A1F600CA4E15 /* ViewController.m in Sources */,
 				DD2C00DB1B52A1F600CA4E15 /* AppDelegate.m in Sources */,
 				DD2C00D81B52A1F600CA4E15 /* main.m in Sources */,
 			);
@@ -467,7 +473,6 @@
 				DD2C01021B52A1F600CA4E15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		DD2C01031B52A1F600CA4E15 /* Build configuration list for PBXNativeTarget "iTahDoodleTests" */ = {
 			isa = XCConfigurationList;
@@ -476,7 +481,6 @@
 				DD2C01051B52A1F600CA4E15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		DD2C01061B52A1F600CA4E15 /* Build configuration list for PBXNativeTarget "iTahDoodleUITests" */ = {
 			isa = XCConfigurationList;
@@ -485,7 +489,6 @@
 				DD2C01081B52A1F600CA4E15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

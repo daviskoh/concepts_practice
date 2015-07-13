@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD35EBA91B54776B00D42EDC /* OwnedAppliance.m in Sources */ = {isa = PBXBuildFile; fileRef = DD35EBA81B54776B00D42EDC /* OwnedAppliance.m */; };
 		DD3D56931B536562001C3FEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3D56921B536562001C3FEB /* main.m */; };
 		DD3D569B1B5365E9001C3FEB /* Appliance.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3D569A1B5365E9001C3FEB /* Appliance.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD35EBA71B54776B00D42EDC /* OwnedAppliance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnedAppliance.h; sourceTree = "<group>"; };
+		DD35EBA81B54776B00D42EDC /* OwnedAppliance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnedAppliance.m; sourceTree = "<group>"; };
 		DD3D568F1B536562001C3FEB /* Appliances */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Appliances; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3D56921B536562001C3FEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD3D56991B5365E9001C3FEB /* Appliance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appliance.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 			children = (
 				DD3D56991B5365E9001C3FEB /* Appliance.h */,
 				DD3D569A1B5365E9001C3FEB /* Appliance.m */,
+				DD35EBA71B54776B00D42EDC /* OwnedAppliance.h */,
+				DD35EBA81B54776B00D42EDC /* OwnedAppliance.m */,
 				DD3D56921B536562001C3FEB /* main.m */,
 			);
 			path = Appliances;
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD35EBA91B54776B00D42EDC /* OwnedAppliance.m in Sources */,
 				DD3D56931B536562001C3FEB /* main.m in Sources */,
 				DD3D569B1B5365E9001C3FEB /* Appliance.m in Sources */,
 			);
@@ -241,6 +247,7 @@
 				DD3D56981B536562001C3FEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

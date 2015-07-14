@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ArrayEnumerationBlock)(id, NSUInteger, BOOL *);
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSArray *oldStrings = @[@"Sauerkraut", @"Raygun", @"Big Nerd Ranch", @"Mississippi"];
@@ -17,9 +19,7 @@ int main(int argc, const char * argv[]) {
         
         NSArray *vowels = @[@"a", @"e", @"i", @"o", @"u"];
         
-        void (^devowelizer)(id, NSUInteger, BOOL *);
-        
-        devowelizer = ^(id string, NSUInteger i, BOOL *stop) {
+        ArrayEnumerationBlock devowelizer = ^(id string, NSUInteger i, BOOL *stop) {
             NSRange yRange = [string rangeOfString:@"y"
                                            options:NSCaseInsensitiveSearch];
             

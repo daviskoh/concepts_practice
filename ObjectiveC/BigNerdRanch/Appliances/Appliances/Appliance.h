@@ -20,8 +20,8 @@
 
 @interface Appliance : NSObject
 
-@property (copy) NSString *productName;
-@property int voltage;
+@property (copy, nonatomic) NSString *productName;
+@property (nonatomic) int voltage;
 
 // designated initializer
 - (id)initWithProductName:(NSString *)productName;

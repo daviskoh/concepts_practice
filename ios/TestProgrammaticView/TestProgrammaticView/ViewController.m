@@ -16,7 +16,7 @@
 
 - (void)loadView {
     // create new UI View & set as .view prop of ctrl
-    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    CGRect applicationFrame = [UIScreen mainScreen].applicationFrame;
     UIView *mainView = [[UIView alloc] initWithFrame:applicationFrame];
     mainView.backgroundColor = [UIColor greenColor];
     self.view = mainView;

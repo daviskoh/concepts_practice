@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD1895EE1B686ACA0058E03B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1895ED1B686ACA0058E03B /* main.m */; };
+		DD1895F11B686ACA0058E03B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1895F01B686ACA0058E03B /* AppDelegate.m */; };
+		DD1895F41B686ACA0058E03B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1895F31B686ACA0058E03B /* ViewController.m */; };
+		DD1895F71B686ACA0058E03B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1895F51B686ACA0058E03B /* Main.storyboard */; };
+		DD1895F91B686ACA0058E03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1895F81B686ACA0058E03B /* Assets.xcassets */; };
+		DD1895FC1B686ACA0058E03B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1895FA1B686ACA0058E03B /* LaunchScreen.storyboard */; };
+		DD1896071B686ACA0058E03B /* PigLatinConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1896061B686ACA0058E03B /* PigLatinConverterTests.m */; };
+		DD1896121B686ACA0058E03B /* PigLatinConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1896111B686ACA0058E03B /* PigLatinConverterUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD1896031B686ACA0058E03B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD1895E11B686ACA0058E03B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD1895E81B686ACA0058E03B;
+			remoteInfo = PigLatinConverter;
+		};
+		DD18960E1B686ACA0058E03B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD1895E11B686ACA0058E03B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD1895E81B686ACA0058E03B;
+			remoteInfo = PigLatinConverter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD1895E91B686ACA0058E03B /* PigLatinConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PigLatinConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1895ED1B686ACA0058E03B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD1895EF1B686ACA0058E03B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD1895F01B686ACA0058E03B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD1895F21B686ACA0058E03B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DD1895F31B686ACA0058E03B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD1895F61B686ACA0058E03B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD1895F81B686ACA0058E03B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD1895FB1B686ACA0058E03B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD1895FD1B686ACA0058E03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD1896021B686ACA0058E03B /* PigLatinConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PigLatinConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1896061B686ACA0058E03B /* PigLatinConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PigLatinConverterTests.m; sourceTree = "<group>"; };
+		DD1896081B686ACA0058E03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD18960D1B686ACA0058E03B /* PigLatinConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PigLatinConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1896111B686ACA0058E03B /* PigLatinConverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PigLatinConverterUITests.m; sourceTree = "<group>"; };
+		DD1896131B686ACA0058E03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD1895E61B686ACA0058E03B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD1895FF1B686ACA0058E03B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD18960A1B686ACA0058E03B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD1895E01B686ACA0058E03B = {
+			isa = PBXGroup;
+			children = (
+				DD1895EB1B686ACA0058E03B /* PigLatinConverter */,
+				DD1896051B686ACA0058E03B /* PigLatinConverterTests */,
+				DD1896101B686ACA0058E03B /* PigLatinConverterUITests */,
+				DD1895EA1B686ACA0058E03B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD1895EA1B686ACA0058E03B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD1895E91B686ACA0058E03B /* PigLatinConverter.app */,
+				DD1896021B686ACA0058E03B /* PigLatinConverterTests.xctest */,
+				DD18960D1B686ACA0058E03B /* PigLatinConverterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD1895EB1B686ACA0058E03B /* PigLatinConverter */ = {
+			isa = PBXGroup;
+			children = (
+				DD1895EF1B686ACA0058E03B /* AppDelegate.h */,
+				DD1895F01B686ACA0058E03B /* AppDelegate.m */,
+				DD1895F21B686ACA0058E03B /* ViewController.h */,
+				DD1895F31B686ACA0058E03B /* ViewController.m */,
+				DD1895F51B686ACA0058E03B /* Main.storyboard */,
+				DD1895F81B686ACA0058E03B /* Assets.xcassets */,
+				DD1895FA1B686ACA0058E03B /* LaunchScreen.storyboard */,
+				DD1895FD1B686ACA0058E03B /* Info.plist */,
+				DD1895EC1B686ACA0058E03B /* Supporting Files */,
+			);
+			path = PigLatinConverter;
+			sourceTree = "<group>";
+		};
+		DD1895EC1B686ACA0058E03B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD1895ED1B686ACA0058E03B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD1896051B686ACA0058E03B /* PigLatinConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD1896061B686ACA0058E03B /* PigLatinConverterTests.m */,
+				DD1896081B686ACA0058E03B /* Info.plist */,
+			);
+			path = PigLatinConverterTests;
+			sourceTree = "<group>";
+		};
+		DD1896101B686ACA0058E03B /* PigLatinConverterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD1896111B686ACA0058E03B /* PigLatinConverterUITests.m */,
+				DD1896131B686ACA0058E03B /* Info.plist */,
+			);
+			path = PigLatinConverterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD1895E81B686ACA0058E03B /* PigLatinConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD1896161B686ACA0058E03B /* Build configuration list for PBXNativeTarget "PigLatinConverter" */;
+			buildPhases = (
+				DD1895E51B686ACA0058E03B /* Sources */,
+				DD1895E61B686ACA0058E03B /* Frameworks */,
+				DD1895E71B686ACA0058E03B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PigLatinConverter;
+			productName = PigLatinConverter;
+			productReference = DD1895E91B686ACA0058E03B /* PigLatinConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD1896011B686ACA0058E03B /* PigLatinConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD1896191B686ACA0058E03B /* Build configuration list for PBXNativeTarget "PigLatinConverterTests" */;
+			buildPhases = (
+				DD1895FE1B686ACA0058E03B /* Sources */,
+				DD1895FF1B686ACA0058E03B /* Frameworks */,
+				DD1896001B686ACA0058E03B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD1896041B686ACA0058E03B /* PBXTargetDependency */,
+			);
+			name = PigLatinConverterTests;
+			productName = PigLatinConverterTests;
+			productReference = DD1896021B686ACA0058E03B /* PigLatinConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD18960C1B686ACA0058E03B /* PigLatinConverterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD18961C1B686ACA0058E03B /* Build configuration list for PBXNativeTarget "PigLatinConverterUITests" */;
+			buildPhases = (
+				DD1896091B686ACA0058E03B /* Sources */,
+				DD18960A1B686ACA0058E03B /* Frameworks */,
+				DD18960B1B686ACA0058E03B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD18960F1B686ACA0058E03B /* PBXTargetDependency */,
+			);
+			name = PigLatinConverterUITests;
+			productName = PigLatinConverterUITests;
+			productReference = DD18960D1B686ACA0058E03B /* PigLatinConverterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD1895E11B686ACA0058E03B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = com.DavisKoh;
+				TargetAttributes = {
+					DD1895E81B686ACA0058E03B = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					DD1896011B686ACA0058E03B = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = DD1895E81B686ACA0058E03B;
+					};
+					DD18960C1B686ACA0058E03B = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = DD1895E81B686ACA0058E03B;
+					};
+				};
+			};
+			buildConfigurationList = DD1895E41B686ACA0058E03B /* Build configuration list for PBXProject "PigLatinConverter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD1895E01B686ACA0058E03B;
+			productRefGroup = DD1895EA1B686ACA0058E03B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD1895E81B686ACA0058E03B /* PigLatinConverter */,
+				DD1896011B686ACA0058E03B /* PigLatinConverterTests */,
+				DD18960C1B686ACA0058E03B /* PigLatinConverterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD1895E71B686ACA0058E03B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1895FC1B686ACA0058E03B /* LaunchScreen.storyboard in Resources */,
+				DD1895F91B686ACA0058E03B /* Assets.xcassets in Resources */,
+				DD1895F71B686ACA0058E03B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD1896001B686ACA0058E03B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD18960B1B686ACA0058E03B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD1895E51B686ACA0058E03B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1895F41B686ACA0058E03B /* ViewController.m in Sources */,
+				DD1895F11B686ACA0058E03B /* AppDelegate.m in Sources */,
+				DD1895EE1B686ACA0058E03B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD1895FE1B686ACA0058E03B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1896071B686ACA0058E03B /* PigLatinConverterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD1896091B686ACA0058E03B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1896121B686ACA0058E03B /* PigLatinConverterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD1896041B686ACA0058E03B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD1895E81B686ACA0058E03B /* PigLatinConverter */;
+			targetProxy = DD1896031B686ACA0058E03B /* PBXContainerItemProxy */;
+		};
+		DD18960F1B686ACA0058E03B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD1895E81B686ACA0058E03B /* PigLatinConverter */;
+			targetProxy = DD18960E1B686ACA0058E03B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD1895F51B686ACA0058E03B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD1895F61B686ACA0058E03B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD1895FA1B686ACA0058E03B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD1895FB1B686ACA0058E03B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD1896141B686ACA0058E03B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD1896151B686ACA0058E03B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD1896171B686ACA0058E03B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PigLatinConverter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daviskoh.PigLatinConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD1896181B686ACA0058E03B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PigLatinConverter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daviskoh.PigLatinConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD18961A1B686ACA0058E03B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PigLatinConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daviskoh.PigLatinConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PigLatinConverter.app/PigLatinConverter";
+			};
+			name = Debug;
+		};
+		DD18961B1B686ACA0058E03B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PigLatinConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daviskoh.PigLatinConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PigLatinConverter.app/PigLatinConverter";
+			};
+			name = Release;
+		};
+		DD18961D1B686ACA0058E03B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PigLatinConverterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daviskoh.PigLatinConverterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PigLatinConverter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DD18961E1B686ACA0058E03B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PigLatinConverterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daviskoh.PigLatinConverterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PigLatinConverter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD1895E41B686ACA0058E03B /* Build configuration list for PBXProject "PigLatinConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD1896141B686ACA0058E03B /* Debug */,
+				DD1896151B686ACA0058E03B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD1896161B686ACA0058E03B /* Build configuration list for PBXNativeTarget "PigLatinConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD1896171B686ACA0058E03B /* Debug */,
+				DD1896181B686ACA0058E03B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD1896191B686ACA0058E03B /* Build configuration list for PBXNativeTarget "PigLatinConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD18961A1B686ACA0058E03B /* Debug */,
+				DD18961B1B686ACA0058E03B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD18961C1B686ACA0058E03B /* Build configuration list for PBXNativeTarget "PigLatinConverterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD18961D1B686ACA0058E03B /* Debug */,
+				DD18961E1B686ACA0058E03B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD1895E11B686ACA0058E03B /* Project object */;
+}

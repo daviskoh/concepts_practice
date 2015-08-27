@@ -15,6 +15,8 @@
 		DDBF14F61B8E827800A31F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBF14F41B8E827800A31F6D /* LaunchScreen.storyboard */; };
 		DDBF15011B8E827800A31F6D /* InstaPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF15001B8E827800A31F6D /* InstaPhotoTests.m */; };
 		DDBF150C1B8E827800A31F6D /* InstaPhotoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF150B1B8E827800A31F6D /* InstaPhotoUITests.m */; };
+		DDBF151B1B8E8A7F00A31F6D /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF151A1B8E8A7F00A31F6D /* FeedViewController.m */; };
+		DDBF151E1B8E8CD500A31F6D /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF151D1B8E8CD500A31F6D /* FavoritesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		DDBF15071B8E827800A31F6D /* InstaPhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBF150B1B8E827800A31F6D /* InstaPhotoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaPhotoUITests.m; sourceTree = "<group>"; };
 		DDBF150D1B8E827800A31F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDBF15191B8E8A7F00A31F6D /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		DDBF151A1B8E8A7F00A31F6D /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		DDBF151C1B8E8CD500A31F6D /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		DDBF151D1B8E8CD500A31F6D /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 		DDBF14E51B8E827800A31F6D /* InstaPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				DDBF15191B8E8A7F00A31F6D /* FeedViewController.h */,
+				DDBF151A1B8E8A7F00A31F6D /* FeedViewController.m */,
+				DDBF151C1B8E8CD500A31F6D /* FavoritesViewController.h */,
+				DDBF151D1B8E8CD500A31F6D /* FavoritesViewController.m */,
 				DDBF14E91B8E827800A31F6D /* AppDelegate.h */,
 				DDBF14EA1B8E827800A31F6D /* AppDelegate.m */,
 				DDBF14EC1B8E827800A31F6D /* ViewController.h */,
@@ -270,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBF151E1B8E8CD500A31F6D /* FavoritesViewController.m in Sources */,
 				DDBF14EE1B8E827800A31F6D /* ViewController.m in Sources */,
 				DDBF14EB1B8E827800A31F6D /* AppDelegate.m in Sources */,
+				DDBF151B1B8E8A7F00A31F6D /* FeedViewController.m in Sources */,
 				DDBF14E81B8E827800A31F6D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

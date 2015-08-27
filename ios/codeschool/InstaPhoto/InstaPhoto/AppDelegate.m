@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FeedViewController.h"
+#import "FavoritesViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,14 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    UIViewController *feedViewController = [[UIViewController alloc] init];
-    feedViewController.title = @"Feed";
-    feedViewController.view.backgroundColor = [UIColor blueColor];
-    
-    UIViewController *favoritesViewController = [[UIViewController alloc] init];
-    favoritesViewController.title = @"Favorites";
-    favoritesViewController.view.backgroundColor = [UIColor redColor];
-    
+    FeedViewController *feedViewController = [[FeedViewController alloc] init];
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     

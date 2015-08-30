@@ -8,6 +8,7 @@
 
 #import "FeedViewController.h"
 #import "Image.h"
+#import "FavoritesViewController.h"
 
 @interface FeedViewController ()
 
@@ -53,17 +54,29 @@
         imageView.contentMode = UIViewContentModeTop;
         CGFloat x = ([[UIScreen mainScreen] bounds].size.width - 50) / 2;
         imageView.frame = CGRectMake(x, y, 50, 50);
-        y += 150;
         
         [self.scrollView addSubview:imageView];
+        y += 150;
+        
+        UIButton *favoritesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        favoritesButton.frame = CGRectMake(60, y, 200, 44);
+        [favoritesButton setTitle:@"favorites" forState:UIControlStateNormal];
+        [favoritesButton addTarget:self
+                            action:@selector(imageClicked:)
+                  forControlEvents:UIControlEventTouchUpInside];
+        [self.scrollView addSubview:favoritesButton];
+        y += 60;
     }
     
     [self.view addSubview:self.scrollView];
 }
 
 // TODO: add touch event to images
-- (void)imageClicked:(UIImageView *)sender {
+- (void)imageClicked:(UIButton *)sender {
     NSLog(@"clicked image: %@", sender);
+    
+    FavoritesViewController *favCtrl = [[FavoritesViewController alloc] init];
+    [self.navigationController pushViewController:favCtrl animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

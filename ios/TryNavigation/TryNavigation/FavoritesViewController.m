@@ -1,29 +1,34 @@
 //
-//  NavViewController.m
+//  FavoritesViewController.m
 //  TryNavigation
 //
-//  Created by Davis Koh on 8/29/15.
+//  Created by Davis Koh on 8/30/15.
 //  Copyright © 2015 com.DavisKoh. All rights reserved.
 //
 
-#import "NavViewController.h"
-#import "FeedViewController.h"
-#import "ProfileViewController.h"
+#import "FavoritesViewController.h"
 
-@interface NavViewController ()
+@interface FavoritesViewController ()
 
 @end
 
-@implementation NavViewController
+@implementation FavoritesViewController
+
+- (id)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        self.title = @"Favorites";
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    ProfileViewController *profileViewCtrl = [[ProfileViewController alloc] init];
-    FeedViewController *feedViewCtrl = [[FeedViewController alloc] init];
     
-    UINavigationController *uiNavCtrl = [[UINavigationController alloc] initWithRootViewController:feedViewCtrl];
-    self.viewControllers = @[uiNavCtrl, profileViewCtrl];
+    self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)didReceiveMemoryWarning {

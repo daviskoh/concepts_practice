@@ -10,6 +10,9 @@
 
 @interface FeedViewController ()
 
+@property NSArray *photos;
+@property UIScrollView *scrollView;
+
 @end
 
 @implementation FeedViewController
@@ -21,6 +24,15 @@
         self.title = @"Feed";
         // below will look in cache/filesystem for tab_icon_feed.png
         // self.tabBarItem.image = [UIImage imageNamed:@"tab_icon_feed"];
+        
+        self.photos = @[
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg",
+                        ];
     }
     
     return self;
@@ -30,6 +42,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blueColor];
+    
+    // TODO: abstract views into classes
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:bounds];
+    self.scrollView.autoresizesSubviews = UIViewAutoresizingFlexibleHeight;
+    self.scrollView.contentSize = CGSizeMake(bounds.size.width, self.photos.count * 170);
+    [self.view addSubview:self.scrollView];
+    
+    int y = 0;
+    
+    for (NSString *imageUrl in self.photos) {
+        NSURL *url = [NSURL URLWithString:imageUrl];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+
+        [imageView setContentMode:UIViewContentModeScaleAspectFit];
+        // TODO: pin dynamically to device width
+        imageView.frame = CGRectMake(100, y, 200, 200);
+        y += 150;
+
+        [self.scrollView addSubview:imageView];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

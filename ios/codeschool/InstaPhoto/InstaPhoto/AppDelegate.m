@@ -25,8 +25,10 @@
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
+    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:feedViewController];
+    
     // defaults to 1st ctrl in array
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    [tabBarController setViewControllers:@[navCtrl, favoritesViewController]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tabBarController;

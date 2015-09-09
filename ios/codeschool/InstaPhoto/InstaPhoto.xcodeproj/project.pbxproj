@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD290F6F1BA0ED8E00CA7531 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD290F6E1BA0ED8E00CA7531 /* ProfileViewController.m */; };
 		DDBF14E81B8E827800A31F6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF14E71B8E827800A31F6D /* main.m */; };
 		DDBF14EB1B8E827800A31F6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF14EA1B8E827800A31F6D /* AppDelegate.m */; };
-		DDBF14EE1B8E827800A31F6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF14ED1B8E827800A31F6D /* ViewController.m */; };
 		DDBF14F11B8E827800A31F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBF14EF1B8E827800A31F6D /* Main.storyboard */; };
 		DDBF14F31B8E827800A31F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDBF14F21B8E827800A31F6D /* Assets.xcassets */; };
 		DDBF14F61B8E827800A31F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBF14F41B8E827800A31F6D /* LaunchScreen.storyboard */; };
@@ -37,12 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD290F6D1BA0ED8E00CA7531 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		DD290F6E1BA0ED8E00CA7531 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		DDBF14E31B8E827800A31F6D /* InstaPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBF14E71B8E827800A31F6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DDBF14E91B8E827800A31F6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDBF14EA1B8E827800A31F6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DDBF14EC1B8E827800A31F6D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DDBF14ED1B8E827800A31F6D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDBF14F01B8E827800A31F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDBF14F21B8E827800A31F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDBF14F51B8E827800A31F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,14 +107,14 @@
 		DDBF14E51B8E827800A31F6D /* InstaPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				DD290F6D1BA0ED8E00CA7531 /* ProfileViewController.h */,
+				DD290F6E1BA0ED8E00CA7531 /* ProfileViewController.m */,
 				DDBF15191B8E8A7F00A31F6D /* FeedViewController.h */,
 				DDBF151A1B8E8A7F00A31F6D /* FeedViewController.m */,
 				DDBF151C1B8E8CD500A31F6D /* FavoritesViewController.h */,
 				DDBF151D1B8E8CD500A31F6D /* FavoritesViewController.m */,
 				DDBF14E91B8E827800A31F6D /* AppDelegate.h */,
 				DDBF14EA1B8E827800A31F6D /* AppDelegate.m */,
-				DDBF14EC1B8E827800A31F6D /* ViewController.h */,
-				DDBF14ED1B8E827800A31F6D /* ViewController.m */,
 				DDBF14EF1B8E827800A31F6D /* Main.storyboard */,
 				DDBF14F21B8E827800A31F6D /* Assets.xcassets */,
 				DDBF14F41B8E827800A31F6D /* LaunchScreen.storyboard */,
@@ -281,10 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDBF151E1B8E8CD500A31F6D /* FavoritesViewController.m in Sources */,
-				DDBF14EE1B8E827800A31F6D /* ViewController.m in Sources */,
 				DDBF14EB1B8E827800A31F6D /* AppDelegate.m in Sources */,
 				DDBF151B1B8E8A7F00A31F6D /* FeedViewController.m in Sources */,
 				DDBF14E81B8E827800A31F6D /* main.m in Sources */,
+				DD290F6F1BA0ED8E00CA7531 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +508,7 @@
 				DDBF15121B8E827800A31F6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDBF15131B8E827800A31F6D /* Build configuration list for PBXNativeTarget "InstaPhotoTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +517,7 @@
 				DDBF15151B8E827800A31F6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDBF15161B8E827800A31F6D /* Build configuration list for PBXNativeTarget "InstaPhotoUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +526,7 @@
 				DDBF15181B8E827800A31F6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

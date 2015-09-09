@@ -7,6 +7,7 @@
 //
 
 #import "FeedViewController.h"
+#import "ProfileViewController.h"
 
 @interface FeedViewController ()
 
@@ -60,12 +61,23 @@
         UIButton *imageView = [UIButton buttonWithType:UIButtonTypeCustom];
         [imageView setImage:image forState:UIControlStateNormal];
         
+        [imageView addTarget:self
+                      action:@selector(clickImageButton:)
+            forControlEvents:UIControlEventTouchUpInside];
+        
         // TODO: pin dynamically to device width
         imageView.frame = CGRectMake(100, y, 200, 200);
         y += 150;
 
         [self.scrollView addSubview:imageView];
     }
+}
+
+- (void)clickImageButton:(UIButton *)sender {
+    ProfileViewController *profileCtrl = [[ProfileViewController alloc] init];
+
+    [self.navigationController pushViewController:profileCtrl
+                                         animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

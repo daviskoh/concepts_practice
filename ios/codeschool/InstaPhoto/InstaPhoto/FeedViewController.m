@@ -52,13 +52,14 @@
     
     int y = 0;
     
+    // TODO: change UIImageView to clickable Button
     for (NSString *imageUrl in self.photos) {
         NSURL *url = [NSURL URLWithString:imageUrl];
         NSData *data = [NSData dataWithContentsOfURL:url];
         UIImage *image = [UIImage imageWithData:data];
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-
-        [imageView setContentMode:UIViewContentModeScaleAspectFit];
+        UIButton *imageView = [UIButton buttonWithType:UIButtonTypeCustom];
+        [imageView setImage:image forState:UIControlStateNormal];
+        
         // TODO: pin dynamically to device width
         imageView.frame = CGRectMake(100, y, 200, 200);
         y += 150;

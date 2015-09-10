@@ -8,6 +8,7 @@
 
 #import "FeedViewController.h"
 #import "ProfileViewController.h"
+#import "KOHButton.h"
 
 @interface FeedViewController ()
 
@@ -52,13 +53,15 @@
     [self.view addSubview:self.scrollView];
     
     int y = 0;
+    int i = 0;
     
     // TODO: change UIImageView to clickable Button
     for (NSString *imageUrl in self.photos) {
         NSURL *url = [NSURL URLWithString:imageUrl];
         NSData *data = [NSData dataWithContentsOfURL:url];
         UIImage *image = [UIImage imageWithData:data];
-        UIButton *imageView = [UIButton buttonWithType:UIButtonTypeCustom];
+        KOHButton *imageView = [KOHButton buttonWithType:UIButtonTypeCustom];
+        imageView.userId = i++;
         [imageView setImage:image forState:UIControlStateNormal];
         
         [imageView addTarget:self
@@ -73,8 +76,10 @@
     }
 }
 
-- (void)clickImageButton:(UIButton *)sender {
+- (void)clickImageButton:(KOHButton *)sender {
     ProfileViewController *profileCtrl = [[ProfileViewController alloc] init];
+
+    NSLog(@"%i", sender.userId);
 
     [self.navigationController pushViewController:profileCtrl
                                          animated:YES];

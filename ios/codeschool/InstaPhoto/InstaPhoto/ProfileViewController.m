@@ -10,6 +10,8 @@
 
 @interface ProfileViewController ()
 
+@property NSDictionary *user;
+
 @end
 
 @implementation ProfileViewController

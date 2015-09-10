@@ -6,6 +6,8 @@
 
 var React = require('react-native');
 var styles = require('./styles');
+var Movie = require('./movie');
+
 var {
   AppRegistry,
   Text,
@@ -88,17 +90,11 @@ var AwesomeProject = React.createClass({
 
   renderMovie: function(movie) {
     return (
-      <View style={styles.container}>
-        <Image source={{uri: movie.posters.thumbnail}}
-               style={styles.thumbnail}>
-        </Image>
-        <View style={styles.rightContainer}>
-          <Text style={styles.title}>{movie.title}</Text>
-          <Text style={styles.year}>{movie.year}</Text>
-        </View>
-      </View>
+      <Movie data={movie}></Movie>
     );
   },
 });
 
+// entry point for JS app
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+

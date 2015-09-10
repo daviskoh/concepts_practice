@@ -10,21 +10,6 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  thumbnail: {
-    width: 53,
-    height: 81,
-  },
-  rightContainer: {
-    flex: 1,
-  },
-  title: {
-    fontSize: 20,
-    marginBottom: 8,
-    textAlign: 'center',
-  },
-  year: {
-    textAlign: 'center',
-  },
   listView: {
     paddingTop: 20,
     backgroundColor: '#F5FCFF',

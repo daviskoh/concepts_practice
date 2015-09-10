@@ -10,7 +10,8 @@ var {
   AppRegistry,
   Text,
   View,
-  Image
+  Image,
+  ListView,
 } = React;
 
 var MOCKED_MOVIES_DATA  = [{ 
@@ -34,7 +35,13 @@ var REQUEST_URL = [
 var AwesomeProject = React.createClass({
   getInitialState: function() {
     return {
-      movies: null
+      // used by ListView to determine which rows chnaged
+      // over course of updates
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2,
+      }),
+      // used to know when data is finished fetching
+      loaded: false,
     };
   },
 
@@ -44,7 +51,8 @@ var AwesomeProject = React.createClass({
       .then((resp) => resp.json())
       .then((respData) => {
         this.setState({
-          movies: respData.movies,
+          dataSource: this.state.dataSource.cloneWithRows(respData.movies),
+          loaded: true,
         });
       })
       .done();
@@ -56,12 +64,16 @@ var AwesomeProject = React.createClass({
   },
 
   render: function() {
-    if (!this.state.movies) {
+    if (!this.state.loaded) {
       return this.renderLoadingView();
     }
 
-    var movie = this.state.movies[0];
-    return this.renderMovie(movie);
+    return (
+      <ListView dataSource={this.state.dataSource}
+                renderRow={this.renderMovie}
+                style={styles.listView}>
+      </ListView>
+    );
   },
 
   renderLoadingView: function() {
@@ -81,12 +93,8 @@ var AwesomeProject = React.createClass({
                style={styles.thumbnail}>
         </Image>
         <View style={styles.rightContainer}>
-          <Text style={styles.title}>
-            {movie.title}
-          </Text>
-          <Text style={styles.year}>
-            {movie.year}
-          </Text>
+          <Text style={styles.title}>{movie.title}</Text>
+          <Text style={styles.year}>{movie.year}</Text>
         </View>
       </View>
     );

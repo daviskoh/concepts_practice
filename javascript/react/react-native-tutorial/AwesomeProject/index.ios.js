@@ -6,6 +6,7 @@
 
 var React = require('react-native');
 var styles = require('./styles');
+var Loader = require('./loader');
 var Movie = require('./movie');
 
 var {
@@ -79,13 +80,7 @@ var AwesomeProject = React.createClass({
   },
 
   renderLoadingView: function() {
-    return (
-      <View style={styles.container}>
-        <Text>
-          Loading movies...
-        </Text>
-      </View>
-    );
+    return (<Loader></Loader>);
   },
 
   renderMovie: function(movie) {

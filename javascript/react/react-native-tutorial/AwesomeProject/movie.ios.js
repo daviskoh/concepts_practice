@@ -9,6 +9,7 @@ var {
   Image,
   Text,
   View,
+  TouchableHighlight,
 } = React;
 
 var Movie = React.createClass({
@@ -18,10 +19,14 @@ var Movie = React.createClass({
         <Image source={{uri: this.props.data.posters.thumbnail}}
                style={styles.movie.thumbnail}>
         </Image>
-        <View style={styles.movie.rightContainer}>
-          <Text style={styles.movie.title}>{this.props.data.title}</Text>
-          <Text style={styles.movie.year}>{this.props.data.year}</Text>
-        </View>
+        <TouchableHighlight onPress={this.handleTouch}
+                            style={styles.movie.rightContainer}
+                            underlayColor="green">
+          <View>
+            <Text style={styles.movie.title}>{this.props.data.title}</Text>
+            <Text style={styles.movie.year}>{this.props.data.year}</Text>
+          </View>
+        </TouchableHighlight>
       </View>
     );
   },

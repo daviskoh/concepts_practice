@@ -15,6 +15,8 @@ var {
   View,
   Image,
   ListView,
+  Navigator,
+  TouchableHighlight,
 } = React;
 
 var REQUEST_URL = [
@@ -64,10 +66,14 @@ var AwesomeProject = React.createClass({
     }
 
     return (
-      <ListView dataSource={this.state.dataSource}
-                renderRow={this.renderMovie}
-                style={styles.listView}>
-      </ListView>
+      <Navigator initialRoute={{name: 'Scene 1', index: 0}}
+                 renderScene={(route, navigator) =>
+                   <ListView dataSource={this.state.dataSource}
+                             renderRow={this.renderMovie}
+                             style={styles.listView}>
+                   </ListView>
+                 }>
+      </Navigator>
     );
   },
 
@@ -76,9 +82,7 @@ var AwesomeProject = React.createClass({
   },
 
   renderMovie: function(movie) {
-    return (
-      <Movie data={movie}></Movie>
-    );
+    return (<Movie data={movie}></Movie>);
   },
 });
 

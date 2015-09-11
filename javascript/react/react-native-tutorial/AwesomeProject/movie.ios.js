@@ -30,6 +30,10 @@ var Movie = React.createClass({
       </View>
     );
   },
+
+  handleTouch: function() {
+    // TODO: navigate to new view
+  },
 });
 
 module.exports = Movie;

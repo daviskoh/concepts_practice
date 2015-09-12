@@ -12,4 +12,6 @@
 
 @property int userId;
 
+- (id)initWithImagePath:(NSString *)imagePath;
+
 @end

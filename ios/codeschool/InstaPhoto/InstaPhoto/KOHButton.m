@@ -10,4 +10,17 @@
 
 @implementation KOHButton
 
+- (id)initWithImagePath:(NSString *)imagePath {
+    self = [super init];
+    
+    if (self) {
+        NSURL *url = [NSURL URLWithString:imagePath];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        [self setImage:image forState:UIControlStateNormal];
+    }
+    
+    return self;
+}
+
 @end

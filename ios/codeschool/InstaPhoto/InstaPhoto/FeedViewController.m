@@ -57,12 +57,8 @@
     
     // TODO: change UIImageView to clickable Button
     for (NSString *imageUrl in self.photos) {
-        NSURL *url = [NSURL URLWithString:imageUrl];
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        UIImage *image = [UIImage imageWithData:data];
-        KOHButton *imageView = [KOHButton buttonWithType:UIButtonTypeCustom];
+        KOHButton *imageView = [[KOHButton alloc] initWithImagePath:imageUrl];
         imageView.userId = i++;
-        [imageView setImage:image forState:UIControlStateNormal];
         
         [imageView addTarget:self
                       action:@selector(clickImageButton:)

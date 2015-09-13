@@ -10,6 +10,6 @@
 
 @interface PhotoViewController : UIViewController
 
-@property (strong, nonatomic) NSString *imageFileName;
+@property (strong, nonatomic) NSString *imagePath;
 
 @end

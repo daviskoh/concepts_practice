@@ -27,8 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImage *image = [UIImage imageNamed:self.imageFileName];
+    NSURL *url = [NSURL URLWithString:self.imagePath];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [UIImage imageWithData:data];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+
     imageView.frame = CGRectMake(10, 10, 300, 300);
     [self.view addSubview:imageView];
 }

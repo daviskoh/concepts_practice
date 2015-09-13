@@ -71,6 +71,7 @@
                                       reuseIdentifier:@"Title"];
     }
     
+    // abstract into KOHImage
     NSString *imagePath = self.images[indexPath.row];
     NSURL *url = [NSURL URLWithString:imagePath];
     NSData *data = [NSData dataWithContentsOfURL:url];
@@ -83,7 +84,7 @@
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PhotoViewController *photoViewCtrl = [[PhotoViewController alloc] init];
-    photoViewCtrl.imageFileName = self.images[indexPath.row];
+    photoViewCtrl.imagePath = self.images[indexPath.row];
     [self.navigationController pushViewController:photoViewCtrl animated:YES];
 }
 

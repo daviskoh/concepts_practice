@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD0D99391BA11F130055C7AB /* KOHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0D99381BA11F130055C7AB /* KOHButton.m */; };
+		DD2760751BA5D85100A746DB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2760741BA5D85100A746DB /* PhotoViewController.m */; };
 		DD290F6F1BA0ED8E00CA7531 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD290F6E1BA0ED8E00CA7531 /* ProfileViewController.m */; };
 		DDBF14E81B8E827800A31F6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF14E71B8E827800A31F6D /* main.m */; };
 		DDBF14EB1B8E827800A31F6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBF14EA1B8E827800A31F6D /* AppDelegate.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		DD0D99371BA11F130055C7AB /* KOHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KOHButton.h; sourceTree = "<group>"; };
 		DD0D99381BA11F130055C7AB /* KOHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KOHButton.m; sourceTree = "<group>"; };
+		DD2760731BA5D85100A746DB /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		DD2760741BA5D85100A746DB /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		DD290F6D1BA0ED8E00CA7531 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		DD290F6E1BA0ED8E00CA7531 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		DDBF14E31B8E827800A31F6D /* InstaPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +118,8 @@
 				DD290F6D1BA0ED8E00CA7531 /* ProfileViewController.h */,
 				DD290F6E1BA0ED8E00CA7531 /* ProfileViewController.m */,
 				DDBF15191B8E8A7F00A31F6D /* FeedTableViewController.h */,
+				DD2760731BA5D85100A746DB /* PhotoViewController.h */,
+				DD2760741BA5D85100A746DB /* PhotoViewController.m */,
 				DDBF151A1B8E8A7F00A31F6D /* FeedTableViewController.m */,
 				DDBF151C1B8E8CD500A31F6D /* FavoritesViewController.h */,
 				DDBF151D1B8E8CD500A31F6D /* FavoritesViewController.m */,
@@ -291,6 +296,7 @@
 				DDBF151B1B8E8A7F00A31F6D /* FeedTableViewController.m in Sources */,
 				DDBF14E81B8E827800A31F6D /* main.m in Sources */,
 				DD290F6F1BA0ED8E00CA7531 /* ProfileViewController.m in Sources */,
+				DD2760751BA5D85100A746DB /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

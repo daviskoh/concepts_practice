@@ -7,12 +7,11 @@
 //
 
 #import "FeedTableViewController.h"
-#import "ProfileViewController.h"
-#import "KOHButton.h"
+#import "PhotoViewController.h"
 
 @interface FeedTableViewController ()
 
-@property NSArray *photos;
+@property NSArray *images;
 @property UIScrollView *scrollView;
 
 @end
@@ -24,6 +23,12 @@
 
     if (self) {
         self.title = @"Feed";
+        self.images = @[
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
+                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg"
+                        ];
     }
     
     return self;
@@ -50,7 +55,7 @@
 // returns number of rows (cells)
 - (NSInteger)tableView:(nonnull UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.images.count;
 }
 
 // init & setup each cell
@@ -70,10 +75,9 @@
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    ProfileViewController *profileCtrl = [[ProfileViewController alloc] init];
-
-    [self.navigationController pushViewController:profileCtrl
-                                         animated:YES];
+    PhotoViewController *photoViewCtrl = [[PhotoViewController alloc] init];
+    photoViewCtrl.imageFileName = self.images[indexPath.row];
+    [self.navigationController pushViewController:photoViewCtrl animated:YES];
 }
 
 @end

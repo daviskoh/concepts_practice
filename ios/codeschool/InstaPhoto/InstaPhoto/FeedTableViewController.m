@@ -8,6 +8,7 @@
 
 #import "FeedTableViewController.h"
 #import "PhotoViewController.h"
+#import "KOHButton.h"
 
 @interface FeedTableViewController ()
 
@@ -69,6 +70,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:@"Title"];
     }
+    
+    NSString *imagePath = self.images[indexPath.row];
+    NSURL *url = [NSURL URLWithString:imagePath];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [UIImage imageWithData:data];
+    cell.imageView.image = image;
     
     return cell;
 }

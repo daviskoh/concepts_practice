@@ -26,6 +26,7 @@
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:feedTableViewCtrl];
+    navCtrl.title = @"Feed";
     
     // defaults to 1st ctrl in array
     [tabBarController setViewControllers:@[navCtrl, favoritesViewController]];

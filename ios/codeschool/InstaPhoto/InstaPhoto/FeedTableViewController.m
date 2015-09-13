@@ -6,18 +6,18 @@
 //  Copyright © 2015 com.DavisKoh. All rights reserved.
 //
 
-#import "FeedViewController.h"
+#import "FeedTableViewController.h"
 #import "ProfileViewController.h"
 #import "KOHButton.h"
 
-@interface FeedViewController ()
+@interface FeedTableViewController ()
 
 @property NSArray *photos;
 @property UIScrollView *scrollView;
 
 @end
 
-@implementation FeedViewController
+@implementation FeedTableViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

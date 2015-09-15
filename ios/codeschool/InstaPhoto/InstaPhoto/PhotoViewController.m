@@ -10,6 +10,8 @@
 
 @interface PhotoViewController ()
 
+@property UIImageView *imageView;
+
 @end
 
 @implementation PhotoViewController
@@ -30,12 +32,23 @@
     NSURL *url = [NSURL URLWithString:self.imagePath];
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage imageWithData:data];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    self.imageView = [[UIImageView alloc] initWithImage:image];
 
-    imageView.frame = CGRectMake(10, 88, 300, 300);
-    imageView.center = [self.view convertPoint:self.view.center
+    self.imageView.frame = CGRectMake(10, 88, 300, 300);
+    self.imageView.center = [self.view convertPoint:self.view.center
                                       fromView:self.view.superview];
-    [self.view addSubview:imageView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didChangeOrientation:)
+                                                 name:@"UIDeviceOrientationDidChangeNotification"
+                                               object:nil];
+    
+    [self.view addSubview:self.imageView];
+}
+
+- (void)didChangeOrientation:(NSNotification *)notification {
+    self.imageView.center = [self.view convertPoint:self.view.center
+                                      fromView:self.view.superview];
 }
 
 - (void)didReceiveMemoryWarning {

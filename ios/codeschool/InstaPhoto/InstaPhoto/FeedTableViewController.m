@@ -78,10 +78,11 @@
     UIImage *image = [UIImage imageWithData:data];
     cell.imageView.image = image;
     
+    // TODO: subclass UITableViewCell for custom dimensions
     CGSize deviceBounds = [[UIScreen mainScreen] bounds].size;
-    NSLog(@"%@", NSStringFromCGSize(deviceBounds));
     cell.imageView.frame = CGRectMake(0, 0, deviceBounds.width, deviceBounds.width);
-    cell.imageView.center = cell.center;
+    cell.imageView.center = [cell convertPoint:cell.center
+                                      fromView:cell.superview];
     
     return cell;
 }

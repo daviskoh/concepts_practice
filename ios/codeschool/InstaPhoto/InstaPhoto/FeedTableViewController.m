@@ -29,16 +29,6 @@
                         @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
                         @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
                         @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg",
-                        @"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg"
                         ];
     }
     
@@ -88,7 +78,17 @@
     UIImage *image = [UIImage imageWithData:data];
     cell.imageView.image = image;
     
+    CGSize deviceBounds = [[UIScreen mainScreen] bounds].size;
+    NSLog(@"%@", NSStringFromCGSize(deviceBounds));
+    cell.imageView.frame = CGRectMake(0, 0, deviceBounds.width, deviceBounds.width);
+    cell.imageView.center = cell.center;
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 500;
 }
 
 - (void)tableView:(UITableView *)tableView

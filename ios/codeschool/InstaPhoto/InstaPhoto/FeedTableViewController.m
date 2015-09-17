@@ -9,6 +9,7 @@
 #import "FeedTableViewController.h"
 #import "PhotoViewController.h"
 #import "KOHButton.h"
+#import "KOHTableViewCell.h"
 
 @interface FeedTableViewController ()
 
@@ -63,11 +64,11 @@
 - (UITableViewCell *)tableView:(nonnull UITableView *)tableView
          cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     // check to see if any cells of style "Title" we can reuse
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Title"];
+    KOHTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Title"];
     
     // if no resusable cell, create one
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[KOHTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:@"Title"];
     }
     
@@ -77,12 +78,6 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage imageWithData:data];
     cell.imageView.image = image;
-    
-    // TODO: subclass UITableViewCell for custom dimensions
-    CGSize deviceBounds = [[UIScreen mainScreen] bounds].size;
-    cell.imageView.frame = CGRectMake(0, 0, deviceBounds.width, deviceBounds.width);
-    cell.imageView.center = [cell convertPoint:cell.center
-                                      fromView:cell.superview];
     
     return cell;
 }

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FeedTableViewController.h"
 #import "FavoritesViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,7 @@
     
     FeedTableViewController *feedTableViewCtrl = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
     FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+    ProfileViewController *profileViewCtrl = [[ProfileViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
@@ -29,7 +31,7 @@
     navCtrl.title = @"Feed";
     
     // defaults to 1st ctrl in array
-    [tabBarController setViewControllers:@[navCtrl, favoritesViewController]];
+    [tabBarController setViewControllers:@[navCtrl, favoritesViewController, profileViewCtrl]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tabBarController;

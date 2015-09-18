@@ -20,8 +20,3 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-
-# node.js
-#
-node_modules/
-npm-debug.log

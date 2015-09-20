@@ -17,10 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(500, 200, 500, 500)];
-    label.text = @"Hello Apple TV";
-    label.font = [label.font fontWithSize:50.0];
-    [self.view addSubview:label];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(500, 200, 500, 500)];
+    [button setTitle:@"Hello Apple TV" forState:UIControlStateNormal];
+    button.titleLabel.font = [button.titleLabel.font fontWithSize:50.0];
+    
+    [button addTarget:self
+               action:@selector(buttonSelected:)
+     forControlEvents:UIControlEventPrimaryActionTriggered];
+
+    [self.view addSubview:button];
+}
+
+- (void)buttonSelected:(UIButton *)sender {
+    NSLog(@"selected");
 }
 
 - (void)didReceiveMemoryWarning {

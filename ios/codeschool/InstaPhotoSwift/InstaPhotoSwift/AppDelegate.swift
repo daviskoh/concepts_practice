@@ -10,12 +10,20 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let profileViewCtrl = ProfileViewController(nibName: nil, bundle: nil)
+        
+        let tabBarCtrl = UITabBarController()
+        tabBarCtrl.viewControllers = [profileViewCtrl]
+        
+        self.window!.rootViewController = tabBarCtrl;
+        self.window?.makeKeyAndVisible();
+
         return true
     }
 

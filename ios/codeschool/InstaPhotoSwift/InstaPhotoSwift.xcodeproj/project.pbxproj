@@ -14,6 +14,7 @@
 		DDBACEF01BB0E61000E94C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBACEEE1BB0E61000E94C1F /* LaunchScreen.storyboard */; };
 		DDBACEFB1BB0E61000E94C1F /* InstaPhotoSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBACEFA1BB0E61000E94C1F /* InstaPhotoSwiftTests.swift */; };
 		DDBACF061BB0E61000E94C1F /* InstaPhotoSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBACF051BB0E61000E94C1F /* InstaPhotoSwiftUITests.swift */; };
+		DDBACF161BB0EE0B00E94C1F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBACF151BB0EE0B00E94C1F /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DDBACF011BB0E61000E94C1F /* InstaPhotoSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPhotoSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBACF051BB0E61000E94C1F /* InstaPhotoSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPhotoSwiftUITests.swift; sourceTree = "<group>"; };
 		DDBACF071BB0E61000E94C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDBACF151BB0EE0B00E94C1F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		DDBACEE41BB0E61000E94C1F /* InstaPhotoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				DDBACF151BB0EE0B00E94C1F /* ProfileViewController.swift */,
 				DDBACEE51BB0E61000E94C1F /* AppDelegate.swift */,
 				DDBACEE71BB0E61000E94C1F /* ViewController.swift */,
 				DDBACEE91BB0E61000E94C1F /* Main.storyboard */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBACF161BB0EE0B00E94C1F /* ProfileViewController.swift in Sources */,
 				DDBACEE81BB0E61000E94C1F /* ViewController.swift in Sources */,
 				DDBACEE61BB0E61000E94C1F /* AppDelegate.swift in Sources */,
 			);
@@ -481,6 +485,7 @@
 				DDBACF0C1BB0E61000E94C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDBACF0D1BB0E61000E94C1F /* Build configuration list for PBXNativeTarget "InstaPhotoSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				DDBACF0F1BB0E61000E94C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDBACF101BB0E61000E94C1F /* Build configuration list for PBXNativeTarget "InstaPhotoSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				DDBACF121BB0E61000E94C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD08BB221BB2274C003CE056 /* FeedNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08BB211BB2274C003CE056 /* FeedNavViewController.swift */; };
+		DD08BB241BB22B8B003CE056 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08BB231BB22B8B003CE056 /* FeedViewController.swift */; };
 		DDBACEE61BB0E61000E94C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBACEE51BB0E61000E94C1F /* AppDelegate.swift */; };
 		DDBACEE81BB0E61000E94C1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBACEE71BB0E61000E94C1F /* ViewController.swift */; };
 		DDBACEEB1BB0E61000E94C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBACEE91BB0E61000E94C1F /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD08BB211BB2274C003CE056 /* FeedNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedNavViewController.swift; sourceTree = "<group>"; };
+		DD08BB231BB22B8B003CE056 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		DDBACEE21BB0E61000E94C1F /* InstaPhotoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaPhotoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBACEE51BB0E61000E94C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBACEE71BB0E61000E94C1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				DDBACF151BB0EE0B00E94C1F /* ProfileViewController.swift */,
+				DD08BB211BB2274C003CE056 /* FeedNavViewController.swift */,
+				DD08BB231BB22B8B003CE056 /* FeedViewController.swift */,
 				DDBACEE51BB0E61000E94C1F /* AppDelegate.swift */,
 				DDBACEE71BB0E61000E94C1F /* ViewController.swift */,
 				DDBACEE91BB0E61000E94C1F /* Main.storyboard */,
@@ -260,6 +266,8 @@
 			files = (
 				DDBACF161BB0EE0B00E94C1F /* ProfileViewController.swift in Sources */,
 				DDBACEE81BB0E61000E94C1F /* ViewController.swift in Sources */,
+				DD08BB241BB22B8B003CE056 /* FeedViewController.swift in Sources */,
+				DD08BB221BB2274C003CE056 /* FeedNavViewController.swift in Sources */,
 				DDBACEE61BB0E61000E94C1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

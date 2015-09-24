@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A4CD92BB2FF513D951C0CC /* Pods_InstaPhotoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EDFDDE8A7CC1400749DDF2 /* Pods_InstaPhotoSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD08BB221BB2274C003CE056 /* FeedNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08BB211BB2274C003CE056 /* FeedNavViewController.swift */; };
 		DD71F3801BB3A49A0055A4B4 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71F37F1BB3A49A0055A4B4 /* FeedTableViewController.swift */; };
 		DDBACEE61BB0E61000E94C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBACEE51BB0E61000E94C1F /* AppDelegate.swift */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4700CE19D43204BA79C4AEC4 /* Pods-InstaPhotoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPhotoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaPhotoSwift/Pods-InstaPhotoSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		57EDFDDE8A7CC1400749DDF2 /* Pods_InstaPhotoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPhotoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBD4A801F9B0897F341C5B6 /* Pods-InstaPhotoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPhotoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaPhotoSwift/Pods-InstaPhotoSwift.release.xcconfig"; sourceTree = "<group>"; };
 		DD08BB211BB2274C003CE056 /* FeedNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedNavViewController.swift; sourceTree = "<group>"; };
 		DD71F37F1BB3A49A0055A4B4 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		DDBACEE21BB0E61000E94C1F /* InstaPhotoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaPhotoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A4CD92BB2FF513D951C0CC /* Pods_InstaPhotoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAB37921249FD70B052CDC77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4700CE19D43204BA79C4AEC4 /* Pods-InstaPhotoSwift.debug.xcconfig */,
+				5CBD4A801F9B0897F341C5B6 /* Pods-InstaPhotoSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DDBACED91BB0E61000E94C1F = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +101,8 @@
 				DDBACEF91BB0E61000E94C1F /* InstaPhotoSwiftTests */,
 				DDBACF041BB0E61000E94C1F /* InstaPhotoSwiftUITests */,
 				DDBACEE31BB0E61000E94C1F /* Products */,
+				BAB37921249FD70B052CDC77 /* Pods */,
+				E39EBFE081FFD9EBE87E2027 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +150,14 @@
 			path = InstaPhotoSwiftUITests;
 			sourceTree = "<group>";
 		};
+		E39EBFE081FFD9EBE87E2027 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57EDFDDE8A7CC1400749DDF2 /* Pods_InstaPhotoSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDBACF0A1BB0E61000E94C1F /* Build configuration list for PBXNativeTarget "InstaPhotoSwift" */;
 			buildPhases = (
+				7D2784B6ED9FAC4552474D8C /* Check Pods Manifest.lock */,
 				DDBACEDE1BB0E61000E94C1F /* Sources */,
 				DDBACEDF1BB0E61000E94C1F /* Frameworks */,
 				DDBACEE01BB0E61000E94C1F /* Resources */,
+				D563E24C70322F9AE1C64EE1 /* Embed Pods Frameworks */,
+				4FB5962269262EFFCF00BEBB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,7 @@
 		DDBACEDA1BB0E61000E94C1F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = com.DavisKoh;
 				TargetAttributes = {
@@ -258,6 +286,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FB5962269262EFFCF00BEBB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaPhotoSwift/Pods-InstaPhotoSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D2784B6ED9FAC4552474D8C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D563E24C70322F9AE1C64EE1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaPhotoSwift/Pods-InstaPhotoSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDBACEDE1BB0E61000E94C1F /* Sources */ = {
@@ -406,6 +482,7 @@
 		};
 		DDBACF0B1BB0E61000E94C1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4700CE19D43204BA79C4AEC4 /* Pods-InstaPhotoSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaPhotoSwift/Info.plist;
@@ -417,6 +494,7 @@
 		};
 		DDBACF0C1BB0E61000E94C1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CBD4A801F9B0897F341C5B6 /* Pods-InstaPhotoSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaPhotoSwift/Info.plist;

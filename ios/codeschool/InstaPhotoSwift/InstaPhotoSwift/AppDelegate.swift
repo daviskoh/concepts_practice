@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let profileViewCtrl = ProfileViewController(nibName: nil, bundle: nil)
-        let feedViewCtrl = FeedViewController(nibName: nil, bundle: nil)
-        let feedNavCtrl = FeedNavViewController(rootViewController: feedViewCtrl)
+        let feedTableViewCtrl = FeedTableViewController(nibName: nil, bundle: nil)
+        let feedNavCtrl = FeedNavViewController(rootViewController: feedTableViewCtrl)
 
         let tabBarCtrl = UITabBarController()
         tabBarCtrl.viewControllers = [feedNavCtrl, profileViewCtrl]

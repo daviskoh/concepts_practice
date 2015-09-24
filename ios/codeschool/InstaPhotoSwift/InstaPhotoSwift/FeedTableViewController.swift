@@ -9,6 +9,7 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
+    var photos: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,12 @@ class FeedTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return photos.count
     }
 
     /*

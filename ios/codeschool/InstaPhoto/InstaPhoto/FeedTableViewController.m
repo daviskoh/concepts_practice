@@ -14,7 +14,6 @@
 @interface FeedTableViewController ()
 
 @property NSArray *images;
-@property UIScrollView *scrollView;
 
 @end
 

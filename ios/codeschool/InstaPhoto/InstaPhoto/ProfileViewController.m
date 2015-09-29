@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ProfileViewController ()
 
@@ -35,6 +36,14 @@
                                                 green:(206 / 255.0)
                                                  blue:(250 / 255.0)
                                                 alpha:1];
+    
+    UIImageView *profileImageView = [[UIImageView alloc] init];
+    profileImageView.frame = CGRectMake(50, 50, 100, 114);
+    NSURL *imageURL = [NSURL URLWithString:@"http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg"];
+    // NOTE: good practice to add placeholder image
+    profileImageView.imageWithURL = imageURL;
+
+    [self.view addSubview:profileImageView];
 }
 
 - (void)didReceiveMemoryWarning {

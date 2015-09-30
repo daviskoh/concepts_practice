@@ -5,6 +5,7 @@ use_frameworks!
 target 'InstaPhotoSwift' do
     # TODO: will this need to be available in testing?
     pod 'Alamofire', '~> 2.0'
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 
 target 'InstaPhotoSwiftTests' do

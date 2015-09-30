@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class FeedTableViewController: UITableViewController {
     var photos: [String] = []
@@ -24,8 +25,8 @@ class FeedTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         Alamofire.request(.GET, "https://api.github.com/users/daviskoh/repos")
-            .responseJSON { resp in
-                print(resp)
+            .responseJSON { (req, res, result) in
+                print(result.value)
             }
     }
 

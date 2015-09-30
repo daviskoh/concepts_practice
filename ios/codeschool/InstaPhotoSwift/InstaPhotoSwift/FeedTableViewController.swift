@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FeedTableViewController: UITableViewController {
     var photos: [String] = []
@@ -21,6 +22,11 @@ class FeedTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        Alamofire.request(.GET, "https://api.github.com/users/daviskoh/repos")
+            .responseJSON { resp in
+                print(resp)
+            }
     }
 
     override func didReceiveMemoryWarning() {

@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class FeedTableViewController: UITableViewController {
-    var photos: [String] = []
+    var repos = [JSON]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,8 @@ class FeedTableViewController: UITableViewController {
         
         Alamofire.request(.GET, "https://api.github.com/users/daviskoh/repos")
             .responseJSON { (req, res, result) in
-                print(result.value)
+                self.repos = JSON(result.value!).array!
+                self.tableView.reloadData()
             }
     }
 
@@ -44,18 +45,24 @@ class FeedTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return photos.count
+        return repos.count / 2
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        // TODO: investigate why removing below breaks app
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"repo")
+        let cell = tableView.dequeueReusableCellWithIdentifier("repo", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let imagePath = self.repos[indexPath.row]["owner"]["avatar_url"].string
+        let url = NSURL(string: imagePath!)
+        let data = NSData(contentsOfURL: url!)
+        let image = UIImage(data: data!)
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRectMake(0, 0, 50, 50)
+        cell.addSubview(imageView)
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

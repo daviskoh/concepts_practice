@@ -36,7 +36,7 @@ class View: UIView {
         
         // center blue subview
         // center x
-        let centerXConstraint = NSLayoutConstraint(
+        let blueViewCenterXConstraint = NSLayoutConstraint(
             item: self.blueView!,
             attribute: NSLayoutAttribute.CenterX,
             relatedBy: NSLayoutRelation.Equal,
@@ -46,7 +46,7 @@ class View: UIView {
             constant: 0
         )
         // center y
-        let centerYConstraint = NSLayoutConstraint(
+        let blueViewCenterYConstraint = NSLayoutConstraint(
             item: self.blueView!,
             attribute: NSLayoutAttribute.CenterY,
             relatedBy: NSLayoutRelation.Equal,
@@ -57,7 +57,7 @@ class View: UIView {
         )
         
         // width
-        let widthConstraint = NSLayoutConstraint(
+        let blueViewWidthConstraint = NSLayoutConstraint(
             item: self.blueView!,
             attribute: NSLayoutAttribute.Width,
             relatedBy: NSLayoutRelation.Equal,
@@ -68,7 +68,7 @@ class View: UIView {
         )
         
         // height
-        let heightConstraint = NSLayoutConstraint(
+        let blueViewHeightConstraint = NSLayoutConstraint(
             item: self.blueView!,
             attribute: NSLayoutAttribute.Height,
             relatedBy: NSLayoutRelation.Equal,
@@ -78,7 +78,7 @@ class View: UIView {
             constant: 200
         )
 
-        self.addConstraints([centerXConstraint, centerYConstraint, widthConstraint, heightConstraint])
+        self.addConstraints([blueViewCenterXConstraint, blueViewCenterYConstraint, blueViewWidthConstraint, blueViewHeightConstraint])
         
         // red view
 

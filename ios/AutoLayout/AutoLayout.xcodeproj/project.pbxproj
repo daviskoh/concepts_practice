@@ -14,6 +14,7 @@
 		DD77532D1BF3DCF400BE23C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD77532B1BF3DCF400BE23C0 /* LaunchScreen.storyboard */; };
 		DD7753381BF3DCF400BE23C0 /* AutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7753371BF3DCF400BE23C0 /* AutoLayoutTests.swift */; };
 		DD7753431BF3DCF400BE23C0 /* AutoLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7753421BF3DCF400BE23C0 /* AutoLayoutUITests.swift */; };
+		DD7753511BF3DE0000BE23C0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7753501BF3DE0000BE23C0 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DD77533E1BF3DCF400BE23C0 /* AutoLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7753421BF3DCF400BE23C0 /* AutoLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutUITests.swift; sourceTree = "<group>"; };
 		DD7753441BF3DCF400BE23C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7753501BF3DE0000BE23C0 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		DD7753211BF3DCF400BE23C0 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				DD7753501BF3DE0000BE23C0 /* View.swift */,
 				DD7753221BF3DCF400BE23C0 /* AppDelegate.swift */,
 				DD7753241BF3DCF400BE23C0 /* ViewController.swift */,
 				DD7753261BF3DCF400BE23C0 /* Main.storyboard */,
@@ -257,6 +260,7 @@
 			files = (
 				DD7753251BF3DCF400BE23C0 /* ViewController.swift in Sources */,
 				DD7753231BF3DCF400BE23C0 /* AppDelegate.swift in Sources */,
+				DD7753511BF3DE0000BE23C0 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

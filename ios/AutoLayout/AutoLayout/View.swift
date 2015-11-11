@@ -11,6 +11,7 @@ import UIKit
 class View: UIView {
     
     var blueView: UIView?
+    var redView: UIView?
     
     // below is UIView's designated initializer
     override init(frame: CGRect) {
@@ -78,5 +79,41 @@ class View: UIView {
         )
 
         self.addConstraints([centerXConstraint, centerYConstraint, widthConstraint, heightConstraint])
+        
+        // red view
+
+        self.redView = UIView()
+        self.redView?.backgroundColor = UIColor.redColor()
+        self.redView?.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.redView!)
+
+        // center red view TO blue view
+        // so when blue view moves, red view moves along w/ it
+        let redViewCenterXConstraint = NSLayoutConstraint(item: self.redView!, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.blueView!, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
+
+        // want red view to be ABOVE blue view
+        let redViewBottomConstraint = NSLayoutConstraint(item: self.redView!, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.blueView!, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
+
+        let redViewWidthConstraint = NSLayoutConstraint(
+            item: self.redView!,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1.0,
+            constant: 100
+        )
+        
+        let redViewHeightConstraint = NSLayoutConstraint(
+            item: self.redView!,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1.0,
+            constant: 100
+        )
+
+        self.addConstraints([redViewCenterXConstraint, redViewBottomConstraint, redViewWidthConstraint, redViewHeightConstraint])
     }
 }

@@ -10,22 +10,73 @@ import UIKit
 
 class View: UIView {
     
+    var blueView: UIView?
+    
     // below is UIView's designated initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.redColor()
+        self.backgroundColor = UIColor.whiteColor()
+        self.setupView()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+    func setupView() {
+        self.blueView = UIView()
+        self.blueView?.backgroundColor = UIColor.blueColor()
+        // when using auto resizing masks used to resize based on
+        // orientation (protrait or landscape)
+        // we want control over that when using autolayout
+        self.blueView?.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addSubview(self.blueView!)
+        
+        // center blue subview
+        // center x
+        let centerXConstraint = NSLayoutConstraint(
+            item: self.blueView!,
+            attribute: NSLayoutAttribute.CenterX,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self,
+            attribute: NSLayoutAttribute.CenterX,
+            multiplier: 1.0,
+            constant: 0
+        )
+        // center y
+        let centerYConstraint = NSLayoutConstraint(
+            item: self.blueView!,
+            attribute: NSLayoutAttribute.CenterY,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self,
+            attribute: NSLayoutAttribute.CenterY,
+            multiplier: 1.0,
+            constant: 0
+        )
+        
+        // width
+        let widthConstraint = NSLayoutConstraint(
+            item: self.blueView!,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1.0,
+            constant: 200
+        )
+        
+        // height
+        let heightConstraint = NSLayoutConstraint(
+            item: self.blueView!,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1.0,
+            constant: 200
+        )
 
+        self.addConstraints([centerXConstraint, centerYConstraint, widthConstraint, heightConstraint])
+    }
 }

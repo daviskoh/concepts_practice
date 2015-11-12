@@ -78,7 +78,12 @@ class View: UIView {
             constant: 200
         )
 
-        self.addConstraints([blueViewCenterXConstraint, blueViewCenterYConstraint, blueViewWidthConstraint, blueViewHeightConstraint])
+        self.addConstraints([
+            blueViewCenterXConstraint,
+            blueViewCenterYConstraint,
+            blueViewWidthConstraint,
+            blueViewHeightConstraint
+        ])
         
         // red view
 
@@ -89,10 +94,26 @@ class View: UIView {
 
         // center red view TO blue view
         // so when blue view moves, red view moves along w/ it
-        let redViewCenterXConstraint = NSLayoutConstraint(item: self.redView!, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.blueView!, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
+        let redViewCenterXConstraint = NSLayoutConstraint(
+            item: self.redView!,
+            attribute: NSLayoutAttribute.CenterX,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.blueView!,
+            attribute: NSLayoutAttribute.CenterX,
+            multiplier: 1.0,
+            constant: 0
+        )
 
         // want red view to be ABOVE blue view
-        let redViewBottomConstraint = NSLayoutConstraint(item: self.redView!, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.blueView!, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
+        let redViewBottomConstraint = NSLayoutConstraint(
+            item: self.redView!,
+            attribute: NSLayoutAttribute.Bottom,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.blueView!,
+            attribute: NSLayoutAttribute.Top,
+            multiplier: 1.0,
+            constant: 0
+        )
 
         let redViewWidthConstraint = NSLayoutConstraint(
             item: self.redView!,
@@ -114,6 +135,11 @@ class View: UIView {
             constant: 100
         )
 
-        self.addConstraints([redViewCenterXConstraint, redViewBottomConstraint, redViewWidthConstraint, redViewHeightConstraint])
+        self.addConstraints([
+            redViewCenterXConstraint,
+            redViewBottomConstraint,
+            redViewWidthConstraint,
+            redViewHeightConstraint
+        ])
     }
 }

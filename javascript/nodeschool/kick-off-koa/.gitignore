@@ -36,3 +36,6 @@ config/runtime.yaml
 
 # Node state
 .nodemon-find-ref
+
+# VIM
+*.swp

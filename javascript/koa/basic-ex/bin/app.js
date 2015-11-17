@@ -1,13 +1,16 @@
 'use strict';
 
-var Koa = require('koa');
-var co = require('co');
-var app = new Koa();
 require('babel-polyfill');
+
+var Koa = require('koa');
+var Router = require('koa-66');
+var app = new Koa();
+
+var router = new Router();
 
 var port = process.env.PORT || 3000;
 
-app.use(function _callee(ctx, next) {
+router.use(function _callee(ctx, next) {
     var start, ms;
     return regeneratorRuntime.async(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
@@ -28,7 +31,7 @@ app.use(function _callee(ctx, next) {
     }, null, this);
 });
 
-app.use(function _callee2(ctx, next) {
+router.use(function _callee2(ctx, next) {
     return regeneratorRuntime.async(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
             case 0:
@@ -47,7 +50,7 @@ app.use(function _callee2(ctx, next) {
     }, null, this);
 });
 
-app.use(function _callee3(ctx, next) {
+router.use(function _callee3(ctx, next) {
     return regeneratorRuntime.async(function _callee3$(_context3) {
         while (1) switch (_context3.prev = _context3.next) {
             case 0:
@@ -63,5 +66,20 @@ app.use(function _callee3(ctx, next) {
     }, null, this);
 });
 
+router.get('/meow', function _callee4(ctx) {
+    return regeneratorRuntime.async(function _callee4$(_context4) {
+        while (1) switch (_context4.prev = _context4.next) {
+            case 0:
+                console.log('meow');
+                ctx.body += '^^^^^^^^';
+
+            case 2:
+            case 'end':
+                return _context4.stop();
+        }
+    }, null, this);
+});
+
+app.use(router.routes());
 console.log('listening on port: ' + port);
 app.listen(3000);

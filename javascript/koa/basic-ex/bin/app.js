@@ -3,6 +3,8 @@
 require('babel-polyfill');
 
 var Koa = require('koa');
+// honestly just waiting for:
+// https://github.com/alexmingoia/koa-router/pull/202
 var Router = require('koa-66');
 var app = new Koa();
 

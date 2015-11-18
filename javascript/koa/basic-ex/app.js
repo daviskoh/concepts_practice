@@ -12,27 +12,27 @@ const router = new Router();
 
 const port = process.env.PORT || 3000;
 
-router.use(async function (ctx, next) {
+router.use(async (ctx, next) => {
     const start = new Date;
     await next();
     const ms = new Date - start;
     console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-router.use(async function (ctx, next) {
+router.use(async (ctx, next) => {
     console.log('sending res');
     ctx.body = 'hello world';
     await next();
     console.log('res sent');
 });
 
-router.use(async function (ctx, next) {
+router.use(async (ctx, next) => {
     console.log('doing nothing');
     ctx.body += '***';
     await next();
 });
 
-router.get('/meow', async function(ctx) {
+router.get('/meow', async (ctx) => {
     console.log('meow');
     ctx.body += '^^^^^^^^';
 });

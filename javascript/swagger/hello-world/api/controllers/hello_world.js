@@ -11,7 +11,7 @@
   It is a good idea to list the modules that your application depends on in the package.json in the project root
  */
 
-const co = require('co');
+const wrap = require('co-express');
 const util = require('util');
 
 /*
@@ -33,7 +33,7 @@ const util = require('util');
   Param 1: a handle to the request object
   Param 2: a handle to the response object
  */
-module.exports.hello = co.wrap(function* (req, res) {
+module.exports.hello = wrap(function* (req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   const name = req.swagger.params.name.value || 'stranger';
   const hello = util.format('Hello, %s!', name);

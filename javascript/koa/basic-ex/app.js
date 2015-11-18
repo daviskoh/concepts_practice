@@ -2,20 +2,20 @@
 
 require('babel-polyfill');
 
-const Koa = require('koa');
+let Koa = require('koa');
 // honestly just waiting for:
 // https://github.com/alexmingoia/koa-router/pull/202
-const Router = require('koa-66');
-const app = new Koa();
+let Router = require('koa-66');
+let app = new Koa();
 
-const router = new Router();
+let router = new Router();
 
-const port = process.env.PORT || 3000;
+let port = process.env.PORT || 3000;
 
 router.use(async (ctx, next) => {
-    const start = new Date;
+    let start = new Date;
     await next();
-    const ms = new Date - start;
+    let ms = new Date - start;
     console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 

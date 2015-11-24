@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "es2015",
+    "babel-preset-es2015",
+    "babel-preset-stage-3"
+  ],
+  "plugins": [
+    "transform-es2015-modules-commonjs",
+    "syntax-async-functions"
+  ]
+}

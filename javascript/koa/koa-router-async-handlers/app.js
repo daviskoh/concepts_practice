@@ -6,20 +6,17 @@ import koaRouter from 'koa-router';
 const app = new Koa();
 const router = koaRouter();
 
-app.use(async (ctx, next) => {
-  const start = new Date;
-  await next();
-  const ms = new Date - start;
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+router.use((ctx, next) => {
+  console.log('middleware hit');
+  ctx.body = 'Hello ';
+  return next();
 });
 
-app.use(ctx => {
-    ctx.body = 'Hello World';
-});
-
-router.get('/', (ctx, next) => {
-  ctx.body += ' meow';
-});
+router
+  .get('/hello/:name', (ctx, next) => {
+    console.log('route hit');
+    ctx.body += ctx.name || 'world';
+  });
 
 app.use(router.routes());
 

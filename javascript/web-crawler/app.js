@@ -36,7 +36,7 @@ const pollResults = (crawlName) => {
   }, null, true, 'America/New_York');
 };
 
-app.post('/scrape', (req, res, next) => {
+app.post('/crawl', (req, res, next) => {
   const crawlName = req.body.name;
 
   if (!crawlName) return res.status(422);

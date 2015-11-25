@@ -7,5 +7,6 @@ http://80apptester.80legs.com/
 
 ```
 # beware: only I have access...
-$ npm run name-of-crawl
+$ npm start
+$ curl -X POST -H "Content-Type:application/json" -d "{\"name\": \"testing\"}" http://localhost:3000/scrape
 ```

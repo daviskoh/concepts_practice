@@ -51,6 +51,13 @@ app.post('/crawl', (req, res, next) => {
   eightylegs.createCrawl(opts, crawlName, (err, result) => {
     if (err) {
       console.log(err);
+
+      if (err.code === 422) {
+        return res.status(422).json({
+          messsage: 'crawl name is already taken'
+        });
+      }
+
       return next(err);
     }
 

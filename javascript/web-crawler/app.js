@@ -1,7 +1,5 @@
 'use strict';
 
-require('babel-core/register');
-
 const eightylegs = require('eightylegs')(process.env.EIGHTYLEGS_KEY);
 const express = require('express');
 const wrap = require('co-express');

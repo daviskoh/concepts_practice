@@ -66,6 +66,12 @@ app.post('/crawl', (req, res, next) => {
   }); 
 });
 
+app.get('/healthcheck', (req, res) => {
+  res.json({
+    message: 'all good'
+  });
+});
+
 const port = process.env.PORT || 3000;
 console.log(`listening on port: ${port}`);
 app.listen(port);

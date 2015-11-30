@@ -15,9 +15,11 @@ app.use(bodyParser.json());
 
 
 const pollResults = (crawlName) => {
+  // every 60 seconds
   const job = new CronJob('0 * * * * *', () => {
     var pause;
 
+    // dont make fresh request until previous one completes
     if (pause) return;
 
     eightylegs.getResultByName(crawlName, (err, result) => {
@@ -26,7 +28,6 @@ const pollResults = (crawlName) => {
         return fs.writeFileSync('NO-RESULTS.txt', 'no results', 'utf8');
       }
 
-      // if result
       fs.writeFileSync('FOUND-RESULTS.json', JSON.stringify(result), 'utf8');
       // write to file
       return job.stop();

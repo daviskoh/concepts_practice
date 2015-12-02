@@ -41,9 +41,9 @@ app.post('/crawl', (req, res, next) => {
   if (!crawlName) return res.status(422);
 
   const opts = {
-    app: 'scrape-ir-about-page',
-    urllist: 'ir',
-    max_depth: 100,
+    app: 'regalauto',
+    urllist: 'regalauto',
+    max_depth: 2,
     max_urls: 20
   };
 

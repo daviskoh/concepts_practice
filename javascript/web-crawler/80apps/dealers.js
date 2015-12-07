@@ -9,8 +9,8 @@ var EightyApp = function() {
         var $html = app.parseHtml(html, $);
         var object = {
           title: $html.filter('title').text(),
-          iframes: [],
-          urls: []
+          iframesCount = $html.find('iframe').length,
+          iframes: []
         };
 
         $html.find('iframe').each(function(i, elem) {
@@ -19,9 +19,7 @@ var EightyApp = function() {
             });
         });
 
-        object.iframesCount = $html.find('iframe').length;
-
-        return JSON.stringify(object);
+        return object;
     };
 
     var visitedLinks = [];

@@ -24,6 +24,8 @@ var EightyApp = function() {
         return JSON.stringify(object);
     };
 
+    var visitedLinks = [];
+
     this.parseLinks = function(html, url, headers, status, jQuery) {
         var regex = /(value|bbo|trade|vyt|black|book)/i;
         if (!url.match(regex)) return;
@@ -40,13 +42,14 @@ var EightyApp = function() {
         $html.find('a').each(function(i, obj) {
             var link = app.makeLink(url, $(this).attr('href'));
 
-            if (links.indexOf(link) !== -1) return;
+            if (visitedLinks.indexOf(link) !== -1) return;
 
             if (link !== null) {
                 try {
                     var linkDomain = link.match(r)[1];
                     if (urlDomain === linkDomain) {
                         links.push(link);
+                        visitedLinks.push(link);
                     }
                 } catch (err) {
 

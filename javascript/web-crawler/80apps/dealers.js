@@ -9,7 +9,7 @@ var EightyApp = function() {
         var $html = app.parseHtml(html, $);
         var object = {
           title: $html.filter('title').text(),
-          iframesCount = $html.find('iframe').length,
+          iframesCount: $html.find('iframe').length,
           iframes: []
         };
 

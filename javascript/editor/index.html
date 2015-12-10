@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <textarea cols="100" rows="20"></textarea>
+
+  <button>
+    Eval Code
+  </button>
+
+  <script>
+    var button = document.querySelector('button');
+    var text = document.querySelector('textarea');
+
+    button.addEventListener('click', function () {
+      eval(text.value);
+    });
+  </script>
+</body>
+</html>

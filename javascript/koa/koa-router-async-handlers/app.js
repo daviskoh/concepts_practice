@@ -6,10 +6,16 @@ import Router from 'koa-router';
 const app = new Koa();
 const router = new Router();
 
-router.use((ctx, next) => {
-  console.log('middleware hit');
+router.use(async (ctx, next) => {
+  console.log('1st middleware hit');
   ctx.body = 'Hello ';
-  return next();
+  await next();
+  console.log('1st middleware fin');
+});
+
+router.use((ctx, next) => {
+  console.log('last middleware');
+  next();
 });
 
 router

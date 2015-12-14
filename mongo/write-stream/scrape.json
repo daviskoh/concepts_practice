@@ -1,0 +1,67 @@
+{
+  "pages": [
+   {
+      "url": "http://sunscion.com/value-your-trade",
+      "result": {
+         "title": "Value Your Trade In Car at Sun Scion New Port Richey serving Tarpon Springs Tampa FL Area",
+         "iframes":[
+            {
+               "src": "http://www.intelliprice.com/intellipricedealer/start.htm?dealerid=4325002"
+            }
+         ],
+         "urls": [],
+         "iframesCount": 1
+      }
+   },
+   {
+      "url": "http://www.towneauto.com/black-book-online.htm",
+      "result": {
+         "title": "Towne Auto Group | New Ford, MINI, BMW, Maserati, Ram, CADILLAC, Hyundai, Dodge, Jeep, Mazda, Lincoln, Buick, Chevrolet, Chrysler dealership in Orchard Park, NY 14127",
+         "iframes": [
+            {
+               "src": "//www.intelliprice.com/intellipricedealer/start.htm?dealerid=4200006"
+            },
+            {
+               "src": "//www.googletagmanager.com/ns.html?id=GTM-4H673"
+            },
+            {
+               "src": "//www.googletagmanager.com/ns.html?id=GTM-K7H4ZT"
+            }
+         ],
+         "urls": [],
+         "iframesCount": 3
+      }
+   },
+   {
+      "url": "http://www.mercedesbenzchicago.com/value-your-trade/",
+      "result": {
+         "title": "Car & Truck Trade-In Value | Mercedes-Benz of Chicago near Oak Park",
+         "iframes": [
+            {
+               "src": "about:blank"
+            },
+            {
+               "src": "about:blank"
+            },
+            {
+               "src": "//www.googletagmanager.com/ns.html?id=GTM-T3FZQL"
+            },
+            {
+               "src": "http://www.intelliprice.com/intellipricedealer/start.htm?dealerid=4191040"
+            }
+         ],
+         "urls": [],
+         "iframesCount": 4
+      }
+   },
+   {
+      "url": "http://www.delandscion.com/Value-Your-Trade.aspx",
+      "result": {
+         "title": "",
+         "iframes": [],
+         "urls": [],
+         "iframesCount": 0
+      }
+   }
+  ]
+}

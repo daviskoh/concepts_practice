@@ -65,6 +65,8 @@ const {nodeInterface, nodeField} = nodeDefinitions(
 
 /**
   * GraphQL Types
+  * &
+  * Fields available to each
   */
 
 const gameType = new GraphQLObjectType({

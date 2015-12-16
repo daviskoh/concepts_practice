@@ -36,3 +36,7 @@ node_modules
 # Vim
 *.swp
 *.swo
+
+# Typescript
+*.js
+*.map

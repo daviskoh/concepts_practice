@@ -1,13 +1,12 @@
 'use strict';
 
 const CronJob = require('cron').CronJob;
+const poll = require('./poll');
 
-var count = 0;
-
-const job = new CronJob('*/5 * * * * *', () => {
-  console.log('meow');
-  count++;
+const job = new CronJob('*/20 * * * * *', () => {
+  poll();
 });
 
 job.start();
+console.log('starting cron');
 

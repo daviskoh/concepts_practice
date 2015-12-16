@@ -1,12 +1,16 @@
 'use strict';
 
-const CronJob = require('cron').CronJob;
-const poll = require('./poll');
+const ForeverMonitor = require('forever-monitor').Monitor;
 
-const job = new CronJob('*/20 * * * * *', () => {
-  poll();
+const child = new (ForeverMonitor)('cron.js', {
+  max: 3
 });
 
-job.start();
-console.log('starting cron');
+child.on('exit', () => {
+  console.log('***********************************');
+  console.log('cron.js has exited after 3 restarts');
+  console.log('***********************************');
+});
+
+child.start();
 

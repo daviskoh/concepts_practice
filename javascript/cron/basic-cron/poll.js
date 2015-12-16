@@ -18,7 +18,8 @@ module.exports = () => {
     if (data) {
       console.log(data);
       fs.writeFileSync('data.json', '', 'utf8');
-      return clearInterval(interval);
+      clearInterval(interval);
+      throw new Error('fuckery');
     }
   }, 2000);
 };

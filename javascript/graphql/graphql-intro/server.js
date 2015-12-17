@@ -6,17 +6,18 @@ import bodyParser from 'body-parser';
 const app = express();
 const PORT = 3000;
 
+const wrap = fn => (...args) => fn(...args).catch(args[2]);
+
 app.use(bodyParser.text({
   type: 'application/graphql'
 }));
 
-app.post('/graphql', (req, res) => {
+app.post('/graphql', wrap(async (req, res) => {
   // TODO: use async/await
-  graphql(schema, req.body)
-    .then((result) => {
-      res.send(JSON.stringify(result, null, 2));
-    });
-});
+  const result = await graphql(schema, req.body);
+
+  res.send(JSON.stringify(result, null, 2));
+}));
 
 const server = app.listen(PORT, () => {
   const host = server.address().address;

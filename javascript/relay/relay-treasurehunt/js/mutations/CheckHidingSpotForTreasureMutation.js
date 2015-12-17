@@ -14,7 +14,6 @@ export default class CheckHidingSpotForTreasureMutation extends Relay.Mutation {
       }
     `,
   };
-
   getMutation() {
     return Relay.QL`mutation{checkHidingSpotForTreasure}`;
   }
@@ -60,4 +59,3 @@ export default class CheckHidingSpotForTreasureMutation extends Relay.Mutation {
     };
   }
 }
-

@@ -25,9 +25,10 @@ class App extends React.Component {
       width: 100,
     };
   }
-
-  _handleHidingSpotClick(hidingSPot) {
-    if (this._isGameOver()) return;
+  _handleHidingSpotClick(hidingSpot) {
+    if (this._isGameOver()) {
+      return;
+    }
     Relay.Store.update(
       new CheckHidingSpotForTreasureMutation({
         game: this.props.game,
@@ -35,28 +36,25 @@ class App extends React.Component {
       })
     );
   }
-
   _hasFoundTreasure() {
     return (
       this.props.game.hidingSpots.edges.some(edge => edge.node.hasTreasure)
     );
   }
-
   _isGameOver() {
     return !this.props.game.turnsRemaining || this._hasFoundTreasure();
   }
-
   renderGameBoard() {
     return this.props.game.hidingSpots.edges.map(edge => {
       return (
-        <div key={edge.node.id}
-             onClick={this._handleHidingSpotClick.bind(this, edge.node)}
-             style={this._getHidingSpotStyle(edge.node)}
+        <div
+          key={edge.node.id}
+          onClick={this._handleHidingSpotClick.bind(this, edge.node)}
+          style={this._getHidingSpotStyle(edge.node)}
         />
       );
     });
   }
-
   render() {
     var headerText;
     if (this.props.relay.getPendingTransactions(this.props.game)) {
@@ -98,4 +96,3 @@ export default Relay.createContainer(App, {
     `,
   },
 });
-

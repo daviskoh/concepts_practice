@@ -30,7 +30,6 @@ import {
 } from 'graphql-relay';
 
 import {
-  // Import methods that your schema can use to interact with your database
   Game,
   HidingSpot,
   checkHidingSpotForTreasure,
@@ -117,8 +116,7 @@ const hidingSpotType = new GraphQLObjectType({
 // game has many hiding spots
 // create connection used to link them together
 // FIXME: below NOT semantically clear as to what its doing
-const {connectionType: hidingSpotConnection} =
-  connectionDefinitions({name: 'HidingSpot', nodeType: hidingSpotType});
+const {connectionType: hidingSpotConnection} = connectionDefinitions({name: 'HidingSpot', nodeType: hidingSpotType});
 
 const queryType = new GraphQLObjectType({
   name: 'Query',

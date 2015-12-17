@@ -38,7 +38,7 @@ class App extends React.Component {
 
   _hasFoundTreasure() {
     return (
-      this.props.gamehidingSpots.edges.some(edge => edge.node.hasTreasure)
+      this.props.game.hidingSpots.edges.some(edge => edge.node.hasTreasure)
     );
   }
 

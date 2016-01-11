@@ -8,7 +8,7 @@ function incrementLexicallyScopedNumber () {
 }
 
 var n = 0;
-attemptIncrementOnNumberArgument(1);
+attemptIncrementOnNumberArgument(n);
 console.log(n); // => 0
 
 incrementLexicallyScopedNumber();

@@ -5,6 +5,7 @@ import UIKit
 // unsorted integers
 let numberList = [8, 2, 10, 9, 11, 1, 7, 3, 4]
 
+
 // Insertion Sort O(n^2)
 // implement an invariant - represents assumptions that remain unchanged throughout execution
 // Invariant here
@@ -43,4 +44,27 @@ func insertionSort(numberList: Array<Int>) -> Array<Int> {
 }
 
 print(insertionSort(numberList))
+
+// Bubble Sort O(n^2)
+func bubbleSort(numberList: Array<Int>) -> Array<Int> {
+  guard numberList.count > 1 else {
+    return numberList
+  }
+
+  var output = numberList
+
+  for var i = 0; i < output.count; i++ {
+
+    for var j = i + 1; j < output.count; j++ {
+
+      if output[i] > output[j] {
+        swap(&output[i], &output[j])
+      }
+    }
+  }
+
+  return output
+}
+
+print(bubbleSort(numberList))
 

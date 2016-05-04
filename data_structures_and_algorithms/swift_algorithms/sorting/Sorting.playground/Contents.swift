@@ -101,3 +101,16 @@ func selectionSort(numberList: Array<Int>) -> Array<Int> {
 
 print(selectionSort(numberList))
 
+
+/**
+ * Summary
+ *
+ * Insertion Sort - repeatedly add new element to sorted output (left side)
+ * Bubble Sort - repeatedly compare neighbor pairs and swap if necessary
+ * Selection Sort - repeatedly pick smallest element to append to result
+ *
+ * looping constructs are similar
+ * diff lies in comparison of elements
+ * and which values are swapped
+ *
+ */

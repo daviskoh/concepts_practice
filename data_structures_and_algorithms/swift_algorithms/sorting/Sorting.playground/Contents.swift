@@ -70,3 +70,34 @@ func bubbleSort(numberList: Array<Int>) -> Array<Int> {
 
 print(bubbleSort(numberList))
 
+// Selection Sort
+func selectionSort(numberList: Array<Int>) -> Array<Int> {
+  guard numberList.count > 1 else {
+    return numberList
+  }
+
+  var output = numberList
+
+  for i in 0..<output.count {
+    var min = i
+
+    // iterate through remainder
+    for var j = i + 1; j < output.count; j++ {
+
+      // store low min
+      if output[min] > output[j] {
+        min = j
+      }
+    }
+
+    // swap min value
+    if i != min {
+      swap(&output[i], &output[min])
+    }
+  }
+
+  return output
+}
+
+print(selectionSort(numberList))
+

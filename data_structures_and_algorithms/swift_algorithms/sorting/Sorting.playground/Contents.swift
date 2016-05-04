@@ -7,6 +7,10 @@ let numberList = [8, 2, 10, 9, 11, 1, 7, 3, 4]
 
 // Insertion Sort O(n^2)
 // implement an invariant - represents assumptions that remain unchanged throughout execution
+// Invariant here
+  // subarray until output[i] is ALREADY SORTED before iteration starts
+  // this is true as the subarray expands to eventually encompass the entire output
+  // at which point the output is sorted
 
 func insertionSort(numberList: Array<Int>) -> Array<Int> {
   // check for trivial case
@@ -27,6 +31,7 @@ func insertionSort(numberList: Array<Int>) -> Array<Int> {
       print(output[j])
       if key < output[j] {
         // move into correct position
+        // basically a swap
         output.removeAtIndex(j + 1)
         output.insert(key, atIndex: j)
       }

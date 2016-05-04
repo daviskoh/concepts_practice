@@ -46,6 +46,8 @@ func insertionSort(numberList: Array<Int>) -> Array<Int> {
 print(insertionSort(numberList))
 
 // Bubble Sort O(n^2)
+// Invariant here
+  // array left of output[i] is sorted similar to insertion sort
 func bubbleSort(numberList: Array<Int>) -> Array<Int> {
   guard numberList.count > 1 else {
     return numberList

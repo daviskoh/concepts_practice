@@ -81,18 +81,40 @@ public class AVLTree<T: Comparable> {
       return false
     }
   }
+
+  // right rotation sequence
+  // needs to be abstracted to apply to both lef/right
+  func rotateRight() {
+    let childToUse = AVLTree()
+    childToUse.height = 0
+    childToUse.key = self.key
+
+    if (getNodeHeight(self.left) - getNodeHeight(self.right)) > 1 {
+
+      // reset root node
+      self.key = self.left?.key
+      self.height = getNodeHeight(self.left)
+
+      // assign new right node
+      self.right = childToUse
+
+      // adjust left node
+      self.left = self.left?.left
+      self.left?.height = 0
+    }
+  }
 }
 
 
 let numberList = [8, 2, 10, 9, 11, 1, 7]
 
-var root = AVLTree<Int>()
+var numberListRoot = AVLTree<Int>()
 
 for n in numberList {
-  root.addNode(n)
+  numberListRoot.addNode(n)
 }
 
-root.right?.right?.key
+numberListRoot.right?.right?.key
 
 
 
@@ -117,6 +139,13 @@ root.right?.right?.key
  */
 
 let balanceList = [29, 26, 23]
+var balanceListRoot = AVLTree<Int>()
+
+for n in balanceList {
+  balanceListRoot.addNode(n)
+}
+
+balanceListRoot.left?.left?.key
 
 // NOTE: in ComSci, tree considered balanced IF height diff bet leaf nodes < 2
 // ex:
@@ -152,4 +181,3 @@ var leafVal = abs((-1) - (-1)) // equals 0 (balanced)
 
 // now height of 29 is 2, tree is no longer balanced
 // need to use ROTATION to re-balance the tree
-

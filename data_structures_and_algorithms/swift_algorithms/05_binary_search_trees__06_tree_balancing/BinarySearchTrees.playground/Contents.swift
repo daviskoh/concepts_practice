@@ -46,6 +46,41 @@ public class AVLTree<T: Comparable> {
       }
     }
   }
+
+  // Tree Balancing Chapter
+
+  func getNodeHeight(node: AVLTree!) -> Int {
+    if node == nil {
+      return -1
+    } else {
+      return node.height
+    }
+  }
+
+  var height: Int {
+    // looks sketchy i know but just fucking run w/ it for now...
+    get { return self.height }
+
+    set {
+      if self.key == nil {
+        return
+      }
+
+      self.height = max(getNodeHeight(self.left), getNodeHeight(self.right)) + 1
+    }
+  }
+
+  func isTreebalanced() -> Bool {
+    if self.key == nil {
+      return false
+    }
+
+    if abs(getNodeHeight(self.left) - getNodeHeight(self.right)) <= 1 {
+      return true
+    } else {
+      return false
+    }
+  }
 }
 
 
@@ -58,3 +93,63 @@ for n in numberList {
 }
 
 root.right?.right?.key
+
+
+
+// Tree Balancing
+
+// Added in Chapter:
+// getNodeHeight()
+// .height
+// isTreeBalanced()
+
+// balanced BST - all nodes have 1 or 2 children (lead nodes)
+
+// unbalanced BSTs can be left or right heavy
+/**
+ * ex: right-heavy
+ *
+ *    (29)
+ *    /  \
+ *  (18) (20)
+ *          \
+ *          (23)
+ */
+
+let balanceList = [29, 26, 23]
+
+// NOTE: in ComSci, tree considered balanced IF height diff bet leaf nodes < 2
+// ex:
+var rootVal = abs((0) - (-1)) // equals 1 (balanced)
+var leafVal = abs((-1) - (-1)) // equals 0 (balanced)
+
+// use .height to detect tree imbalances
+// 1) add root node
+// 2) left / right leaves set to nil, as they dont exist yet
+
+/**   (29)
+ *    /  \
+ * (nil) (nil)
+ */
+
+// get height of each left, find largest, +1
+// ex. for root node (like 29 above) this is 0
+
+/**   (29)
+ *    /
+ *  (26)
+ */
+
+// now height of 29 is 1
+// height of 26 is 0
+
+/**    (29)
+ *     /
+ *  (26)
+ *   /
+ * (23)
+ */
+
+// now height of 29 is 2, tree is no longer balanced
+// need to use ROTATION to re-balance the tree
+
